@@ -3,1349 +3,685 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-  <title>Miss Knit — Boneka Rajut Handmade dengan Cinta</title>
-  <meta name="description" content="Boneka rajut handmade lokal Indonesia. Dibuat dengan tangan, diberikan dengan cinta. Bisa custom warna, ukuran, dan ekspresi." />
-  <meta name="theme-color" content="#FAF6F0" />
+  <title>daenuna.co — Boneka & Keychain Rajut Handmade | Custom Crochet Yogyakarta</title>
+  <meta name="description" content="Boneka & keychain rajut handmade dari Yogyakarta. Custom karakter, warna, dan ukuran. Made with love, stitched for you. IG: @daenuna.co" />
+  <meta name="theme-color" content="#FDF8F3" />
+  <meta property="og:title" content="daenuna.co — Handmade Crochet & Amigurumi" />
+  <meta property="og:description" content="Made with love, stitched for you. Boneka & keychain rajut handmade dari Yogyakarta." />
+  <meta property="og:type" content="website" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,400;1,9..144,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=Caveat:wght@400;500;600&display=swap" rel="stylesheet" />
 
   <style>
     /* ============================================================
-       MISS KNIT — DESIGN TOKENS
+       DESIGN TOKENS
        ============================================================ */
     :root {
-      /* Brand palette */
-      --cream:        #FAF6F0;
-      --cream-2:      #F3ECE0;   /* slightly deeper cream for section variation */
-      --cream-3:      #EEE3D2;   /* even deeper for warm cards */
-      --rose:         #E8A598;
-      --rose-soft:    #F2C5BC;
-      --rose-deep:    #D78A7B;
-      --sage:         #9AAE9A;
-      --sage-soft:    #BBC9BA;
-      --caramel:      #C4956A;
-      --caramel-deep: #A87B52;
-      --ink:          #2C2015;
-      --ink-soft:     #5A4636;
-      --ink-mute:     #8A7868;
-      --line:         #E5D9C7;
+      --cream:          #FDF8F3;
+      --cream-2:        #FAF1E8;
+      --cream-3:        #F4E6D5;
+      --blush:          #F4A8BC;
+      --blush-soft:     #FCDDE6;
+      --blush-deep:     #E0789A;
+      --rose:           #EEB4A4;
+      --rose-soft:      #F9D5CB;
+      --rose-deep:      #D88070;
+      --peach:          #FBCAAA;
+      --peach-soft:     #FDE8D8;
+      --lavender:       #CAB8EC;
+      --lavender-soft:  #E8E0F8;
+      --sage:           #9AB89A;
+      --sage-soft:      #C0D4BF;
+      --caramel:        #C4956A;
+      --caramel-deep:   #A87B52;
+      --ink:            #2C2015;
+      --ink-soft:       #5C4535;
+      --ink-mute:       #9A8070;
+      --line:           #EDD8C5;
+      --white:          #FFFFFF;
 
-      /* Type scale */
-      --display: 'Fraunces', 'Cormorant Garamond', Georgia, serif;
-      --body:    'DM Sans', system-ui, sans-serif;
+      --display:   'Fraunces', Georgia, serif;
+      --body:      'DM Sans', system-ui, sans-serif;
+      --hand:      'Caveat', cursive;
 
-      /* Soft tactile shadows — diffused, never hard */
-      --shadow-xs: 0 2px 6px -2px rgba(74, 48, 28, 0.08);
-      --shadow-sm: 0 8px 22px -10px rgba(74, 48, 28, 0.16);
-      --shadow-md: 0 18px 40px -18px rgba(74, 48, 28, 0.18);
-      --shadow-lg: 0 30px 70px -30px rgba(74, 48, 28, 0.22);
-      --shadow-warm: 0 24px 50px -24px rgba(216, 138, 123, 0.30);
+      --shadow-xs:   0 2px 8px -2px rgba(74,48,28,.07);
+      --shadow-sm:   0 6px 20px -8px rgba(74,48,28,.13);
+      --shadow-md:   0 16px 38px -16px rgba(74,48,28,.16);
+      --shadow-lg:   0 28px 64px -28px rgba(74,48,28,.20);
+      --shadow-pink: 0 20px 44px -16px rgba(224,120,154,.32);
+      --shadow-blush:0 12px 30px -10px rgba(244,168,188,.45);
 
-      /* Radii — generous & soft */
-      --r-sm: 14px;
-      --r-md: 22px;
-      --r-lg: 32px;
-      --r-xl: 44px;
+      --r-sm: 12px;
+      --r-md: 20px;
+      --r-lg: 28px;
+      --r-xl: 40px;
+      --r-2xl: 56px;
       --r-pill: 999px;
 
-      /* Easing */
-      --ease-soft: cubic-bezier(0.22, 1, 0.36, 1);
-      --ease-spring: cubic-bezier(0.34, 1.4, 0.5, 1);
+      --ease-soft:   cubic-bezier(.22,1,.36,1);
+      --ease-spring: cubic-bezier(.34,1.4,.5,1);
 
-      /* Layout */
       --container: 1180px;
-      --gutter: clamp(20px, 4vw, 40px);
-      --section-y: clamp(80px, 11vw, 140px);
+      --gutter:    clamp(20px,4vw,44px);
+      --section-y: clamp(80px,10vw,130px);
     }
 
-    /* ============================================================
-       BASE
-       ============================================================ */
-    *, *::before, *::after { box-sizing: border-box; }
-    html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+    /* ---- Reset ---- */
+    *,*::before,*::after { box-sizing:border-box; }
+    html { -webkit-text-size-adjust:100%; scroll-behavior:smooth; }
     body {
-      margin: 0;
-      font-family: var(--body);
-      font-weight: 400;
-      font-size: 17px;
-      line-height: 1.7;
-      color: var(--ink);
-      background: var(--cream);
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      overflow-x: hidden;
-      position: relative;
+      margin:0; font-family:var(--body); font-size:16.5px; line-height:1.72;
+      color:var(--ink); background:var(--cream);
+      -webkit-font-smoothing:antialiased; overflow-x:hidden;
     }
-
-    /* Subtle grain — fixed full-viewport overlay for tactile warmth */
     body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      z-index: 1;
-      opacity: 0.35;
-      mix-blend-mode: multiply;
-      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.17  0 0 0 0 0.13  0 0 0 0 0.08  0 0 0 0.08 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+      content:""; position:fixed; inset:0; pointer-events:none; z-index:1;
+      opacity:.26; mix-blend-mode:multiply;
+      background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.16 0 0 0 0 0.12 0 0 0 0 0.08 0 0 0 0.07 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
     }
+    img { max-width:100%; height:auto; display:block; }
+    a { color:inherit; text-decoration:none; }
+    button { font:inherit; cursor:pointer; border:none; background:none; color:inherit; }
+    p { margin:0; }
+    h1,h2,h3,h4 { font-family:var(--display); font-weight:400; color:var(--ink); margin:0; line-height:1.08; letter-spacing:-.02em; }
 
-    img { max-width: 100%; height: auto; display: block; }
-    a { color: inherit; text-decoration: none; }
-    button { font: inherit; cursor: pointer; border: none; background: none; color: inherit; }
-
-    h1, h2, h3, h4 {
-      font-family: var(--display);
-      font-weight: 400;
-      color: var(--ink);
-      margin: 0;
-      letter-spacing: -0.02em;
-      line-height: 1.08;
-    }
-    p { margin: 0; }
-
-    .container {
-      width: 100%;
-      max-width: var(--container);
-      margin: 0 auto;
-      padding-left: var(--gutter);
-      padding-right: var(--gutter);
-      position: relative;
-      z-index: 2;
-    }
+    .container { width:100%; max-width:var(--container); margin:0 auto; padding-left:var(--gutter); padding-right:var(--gutter); position:relative; z-index:2; }
 
     .eyebrow {
-      font-family: var(--body);
-      font-size: 12.5px;
-      font-weight: 500;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--caramel-deep);
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
+      font-family:var(--body); font-size:12px; font-weight:600; letter-spacing:.24em;
+      text-transform:uppercase; color:var(--caramel-deep);
+      display:inline-flex; align-items:center; gap:10px;
     }
-    .eyebrow::before {
-      content: "";
-      width: 24px;
-      height: 1px;
-      background: var(--caramel);
-    }
+    .eyebrow::before { content:""; width:22px; height:1.5px; background:var(--caramel); flex-shrink:0; }
+
+    section { position:relative; z-index:2; }
+    .section { padding:var(--section-y) 0; }
+
+    /* ---- Section head ---- */
+    .section-head { max-width:620px; margin-bottom:clamp(44px,6vw,72px); }
+    .section-head.center { margin-left:auto; margin-right:auto; text-align:center; }
+    .section-head .eyebrow { margin-bottom:16px; }
+    .section-head h2 { font-size:clamp(32px,4vw,52px); margin-bottom:16px; }
+    .section-head h2 em { font-style:italic; color:var(--blush-deep); }
+    .section-head p { font-size:clamp(15px,1.2vw,17px); color:var(--ink-soft); line-height:1.75; }
+    .section-head.center p { max-width:500px; margin:0 auto; }
 
     /* ============================================================
        BUTTONS
        ============================================================ */
     .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      padding: 16px 28px;
-      border-radius: var(--r-pill);
-      font-family: var(--body);
-      font-weight: 500;
-      font-size: 15.5px;
-      letter-spacing: 0.01em;
-      transition: transform 0.5s var(--ease-soft),
-                  box-shadow 0.5s var(--ease-soft),
-                  background 0.4s var(--ease-soft),
-                  color 0.4s var(--ease-soft);
-      will-change: transform;
-      white-space: nowrap;
+      display:inline-flex; align-items:center; justify-content:center; gap:9px;
+      padding:16px 30px; border-radius:var(--r-pill);
+      font-family:var(--body); font-weight:600; font-size:15px; letter-spacing:.01em;
+      transition:transform .5s var(--ease-soft), box-shadow .5s var(--ease-soft), background .3s, color .3s;
+      will-change:transform; white-space:nowrap;
     }
-    .btn-primary {
-      background: var(--rose);
-      color: #fff;
-      box-shadow: var(--shadow-warm);
+    .btn-primary { background:var(--blush); color:#fff; box-shadow:var(--shadow-blush); }
+    .btn-primary:hover { background:var(--blush-deep); transform:translateY(-3px) scale(1.01); box-shadow:var(--shadow-pink); }
+    .btn-outline { background:transparent; color:var(--ink); border:1.5px solid rgba(44,32,21,.25); }
+    .btn-outline:hover { background:var(--ink); color:var(--cream); transform:translateY(-3px); border-color:var(--ink); }
+    .btn-ghost { background:rgba(255,255,255,.65); color:var(--ink); box-shadow:var(--shadow-xs); }
+    .btn-ghost:hover { background:#fff; transform:translateY(-2px); box-shadow:var(--shadow-sm); }
+    .btn .arrow { display:inline-block; transition:transform .4s var(--ease-soft); }
+    .btn:hover .arrow { transform:translateX(4px); }
+
+    /* ============================================================
+       FLOATING WHATSAPP
+       ============================================================ */
+    .wa-float {
+      position:fixed; bottom:28px; right:24px; z-index:200;
+      width:58px; height:58px; border-radius:50%;
+      background:#25D366; color:#fff;
+      display:flex; align-items:center; justify-content:center;
+      box-shadow:0 8px 28px -6px rgba(37,211,102,.55);
+      transition:transform .4s var(--ease-spring), box-shadow .4s var(--ease-soft);
     }
-    .btn-primary:hover {
-      background: var(--rose-deep);
-      transform: translateY(-3px);
-      box-shadow: 0 28px 60px -22px rgba(215, 138, 123, 0.55);
+    .wa-float:hover { transform:scale(1.1) translateY(-2px); box-shadow:0 14px 38px -8px rgba(37,211,102,.65); }
+    .wa-float svg { width:26px; height:26px; }
+    .wa-float::after {
+      content:""; position:absolute; inset:-6px; border-radius:50%;
+      border:2px solid rgba(37,211,102,.4);
+      animation:waPulse 2s ease-out infinite;
     }
-    .btn-outline {
-      background: transparent;
-      color: var(--ink);
-      border: 1.5px solid var(--ink);
+    @keyframes waPulse { 0% { transform:scale(.9); opacity:1; } 100% { transform:scale(1.5); opacity:0; } }
+
+    /* Mobile sticky bar */
+    .sticky-order {
+      display:none; position:fixed; bottom:0; left:0; right:0; z-index:150;
+      padding:12px 20px; background:rgba(253,248,243,.96);
+      backdrop-filter:blur(10px); border-top:1px solid var(--line);
     }
-    .btn-outline:hover {
-      background: var(--ink);
-      color: var(--cream);
-      transform: translateY(-3px);
-    }
-    .btn .arrow {
-      display: inline-block;
-      transition: transform 0.4s var(--ease-soft);
-    }
-    .btn:hover .arrow { transform: translateX(4px); }
+    .sticky-order .btn { width:100%; justify-content:center; }
 
     /* ============================================================
        NAVBAR
        ============================================================ */
     .nav {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 100;
-      padding: 22px 0;
-      transition: background 0.4s var(--ease-soft),
-                  backdrop-filter 0.4s var(--ease-soft),
-                  padding 0.4s var(--ease-soft),
-                  box-shadow 0.4s var(--ease-soft);
+      position:fixed; top:0; left:0; right:0; z-index:100; padding:18px 0;
+      transition:background .4s var(--ease-soft), backdrop-filter .4s, padding .4s, box-shadow .4s;
     }
     .nav.scrolled {
-      background: rgba(250, 246, 240, 0.85);
-      backdrop-filter: saturate(140%) blur(14px);
-      -webkit-backdrop-filter: saturate(140%) blur(14px);
-      padding: 14px 0;
-      box-shadow: 0 1px 0 rgba(74, 48, 28, 0.06);
+      background:rgba(253,248,243,.9); backdrop-filter:saturate(160%) blur(16px);
+      -webkit-backdrop-filter:saturate(160%) blur(16px);
+      padding:12px 0; box-shadow:0 1px 0 rgba(74,48,28,.07);
     }
-    .nav-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
-    }
-    .logo {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      font-family: var(--display);
-      font-style: italic;
-      font-weight: 500;
-      font-size: 24px;
-      letter-spacing: -0.02em;
-      color: var(--ink);
-    }
-    .logo-mark {
-      width: 34px; height: 34px;
-      flex-shrink: 0;
-    }
-    .nav-links {
-      display: flex;
-      gap: 36px;
-      align-items: center;
-    }
-    .nav-links a {
-      font-size: 15px;
-      font-weight: 400;
-      color: var(--ink-soft);
-      position: relative;
-      transition: color 0.3s var(--ease-soft);
-    }
-    .nav-links a::after {
-      content: "";
-      position: absolute;
-      bottom: -6px;
-      left: 0;
-      width: 0;
-      height: 1.5px;
-      background: var(--rose);
-      transition: width 0.4s var(--ease-soft);
-    }
-    .nav-links a:hover { color: var(--ink); }
-    .nav-links a:hover::after { width: 100%; }
-    .nav-cta { font-size: 14px; padding: 11px 20px; }
+    .nav-inner { display:flex; align-items:center; justify-content:space-between; gap:20px; }
+    .logo { display:inline-flex; align-items:center; gap:10px; font-family:var(--display); font-style:italic; font-weight:500; font-size:22px; letter-spacing:-.03em; color:var(--ink); flex-shrink:0; }
+    .logo-img { width:36px; height:36px; border-radius:50%; object-fit:cover; box-shadow:0 2px 8px rgba(74,48,28,.12); }
+    .nav-links { display:flex; gap:32px; align-items:center; }
+    .nav-links a { font-size:14.5px; font-weight:500; color:var(--ink-soft); position:relative; transition:color .3s; }
+    .nav-links a::after { content:""; position:absolute; bottom:-5px; left:0; width:0; height:2px; background:var(--blush); border-radius:2px; transition:width .4s var(--ease-soft); }
+    .nav-links a:hover { color:var(--ink); }
+    .nav-links a:hover::after { width:100%; }
+    .nav-cta { font-size:13.5px; padding:11px 22px; }
+    .nav-toggle { display:none; width:40px; height:40px; border-radius:50%; align-items:center; justify-content:center; background:rgba(255,255,255,.6); box-shadow:var(--shadow-xs); }
+    .nav-toggle-lines { width:18px; height:14px; display:flex; flex-direction:column; justify-content:space-between; }
+    .nav-toggle-lines span { display:block; height:1.5px; background:var(--ink); border-radius:2px; }
 
-    .nav-toggle {
-      display: none;
-      width: 42px; height: 42px;
-      border-radius: var(--r-pill);
-      align-items: center;
-      justify-content: center;
-      background: rgba(255,255,255,0.5);
+    .mobile-drawer {
+      position:fixed; inset:0; background:rgba(253,248,243,.98);
+      backdrop-filter:blur(10px); z-index:99;
+      padding:100px 32px 40px;
+      transform:translateX(100%); transition:transform .5s var(--ease-soft);
+      pointer-events:none;
     }
-    .nav-toggle span {
-      width: 18px;
-      height: 1.5px;
-      background: var(--ink);
-      position: relative;
-    }
-    .nav-toggle span::before,
-    .nav-toggle span::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      width: 18px;
-      height: 1.5px;
-      background: var(--ink);
-    }
-    .nav-toggle span::before { top: -6px; }
-    .nav-toggle span::after { top: 6px; }
+    .mobile-drawer.open { transform:translateX(0); pointer-events:auto; }
+    .mobile-drawer nav a { display:block; font-family:var(--display); font-size:34px; font-weight:400; color:var(--ink); padding:16px 0; border-bottom:1px solid var(--line); transition:color .3s; }
+    .mobile-drawer nav a:hover { color:var(--blush-deep); }
+    .mobile-drawer .btn { margin-top:28px; width:100%; justify-content:center; font-size:17px; padding:18px; }
 
     /* ============================================================
        HERO
        ============================================================ */
-    .hero {
-      position: relative;
-      padding: 160px 0 var(--section-y);
-      overflow: hidden;
-    }
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
-      gap: clamp(40px, 6vw, 80px);
-      align-items: center;
-    }
-    .hero-eyebrow { margin-bottom: 26px; }
-    .hero h1 {
-      font-size: clamp(46px, 6.4vw, 84px);
-      font-weight: 400;
-      line-height: 1.02;
-      margin-bottom: 28px;
-      letter-spacing: -0.03em;
-    }
-    .hero h1 em {
-      font-style: italic;
-      font-weight: 400;
-      color: var(--rose-deep);
-      position: relative;
-    }
-    .hero h1 em::after {
-      content: "";
-      position: absolute;
-      left: -4px; right: -4px; bottom: 4%;
-      height: 32%;
-      background: rgba(232, 165, 152, 0.22);
-      z-index: -1;
-      border-radius: 8px;
-      transform: rotate(-1.2deg);
-    }
-    .hero h1 em { z-index: 1; }
-    .hero-sub {
-      font-size: clamp(16px, 1.4vw, 19px);
-      color: var(--ink-soft);
-      max-width: 480px;
-      line-height: 1.65;
-      margin-bottom: 38px;
-    }
-    .hero-cta-row {
-      display: flex;
-      align-items: center;
-      gap: 18px;
-      flex-wrap: wrap;
-    }
-    .hero-meta {
-      display: inline-flex;
-      align-items: center;
-      gap: 12px;
-      font-size: 13.5px;
-      color: var(--ink-mute);
-    }
-    .hero-meta .dot {
-      width: 6px; height: 6px;
-      border-radius: 999px;
-      background: var(--sage);
-      box-shadow: 0 0 0 4px rgba(154, 174, 154, 0.2);
-    }
+    .hero { position:relative; padding:150px 0 var(--section-y); overflow:hidden; }
+    .hero-bg-blob { position:absolute; border-radius:50%; filter:blur(60px); pointer-events:none; z-index:0; }
+    .hero-bg-1 { width:600px; height:600px; left:-200px; top:-100px; background:radial-gradient(circle,rgba(252,221,230,.5),transparent 70%); }
+    .hero-bg-2 { width:400px; height:400px; right:-100px; top:20%; background:radial-gradient(circle,rgba(203,188,236,.4),transparent 70%); }
 
-    /* Hero visual */
-    .hero-visual {
-      position: relative;
-      aspect-ratio: 4 / 5;
+    .hero-grid { display:grid; grid-template-columns:1fr 1fr; gap:clamp(40px,6vw,80px); align-items:center; }
+
+    .hero-eyebrow { margin-bottom:20px; }
+    .hero h1 { font-size:clamp(42px,5.6vw,78px); line-height:1.04; margin-bottom:10px; }
+    .hero h1 em { font-style:italic; color:var(--blush-deep); position:relative; }
+    .hero h1 em::after { content:""; position:absolute; left:-2px; right:-2px; bottom:3%; height:30%; background:rgba(244,168,188,.2); z-index:-1; border-radius:6px; transform:rotate(-1deg); }
+    .hero-tagline { font-family:var(--hand); font-size:clamp(20px,2.5vw,28px); color:var(--caramel-deep); margin-bottom:22px; }
+    .hero-sub { font-size:clamp(15px,1.3vw,18px); color:var(--ink-soft); max-width:470px; line-height:1.7; margin-bottom:36px; }
+    .hero-cta-row { display:flex; align-items:center; gap:14px; flex-wrap:wrap; margin-bottom:34px; }
+    .hero-trust { display:flex; align-items:center; gap:20px; flex-wrap:wrap; }
+    .hero-trust-item { display:flex; align-items:center; gap:7px; font-size:13px; color:var(--ink-mute); font-weight:500; }
+    .trust-dot { width:7px; height:7px; border-radius:50%; flex-shrink:0; }
+    .trust-dot.green { background:var(--sage); box-shadow:0 0 0 4px rgba(154,184,154,.22); }
+    .trust-dot.pink  { background:var(--blush); box-shadow:0 0 0 4px rgba(244,168,188,.22); }
+    .trust-dot.peach { background:var(--peach); box-shadow:0 0 0 4px rgba(251,202,168,.22); }
+
+    .hero-visual { position:relative; aspect-ratio:5/6; }
+    .hero-card-main {
+      position:absolute; width:68%; aspect-ratio:4/5; top:0; right:0;
+      border-radius:var(--r-xl); overflow:hidden; box-shadow:var(--shadow-lg);
+      transform:rotate(2deg); transition:transform .8s var(--ease-soft); z-index:2;
     }
-    .hero-img-card {
-      position: absolute;
-      inset: 8% 0 0 8%;
-      border-radius: var(--r-xl);
-      overflow: hidden;
-      box-shadow: var(--shadow-lg);
-      transform: rotate(2.5deg);
-      transition: transform 0.8s var(--ease-soft);
+    .hero-card-main:hover { transform:rotate(.5deg) translateY(-6px); }
+    .hero-card-main img { width:100%; height:100%; object-fit:cover; }
+    .hero-card-sec {
+      position:absolute; width:54%; aspect-ratio:4/5; bottom:-2%; left:0;
+      border-radius:var(--r-xl); overflow:hidden; box-shadow:var(--shadow-md);
+      transform:rotate(-3deg); transition:transform .8s var(--ease-soft);
+      border:6px solid var(--white); z-index:3;
     }
-    .hero-img-card:hover { transform: rotate(0.5deg) translateY(-6px); }
-    .hero-img-card img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    .hero-blob {
-      position: absolute;
-      width: 70%;
-      aspect-ratio: 1;
-      left: -8%;
-      top: -4%;
-      z-index: -1;
-      opacity: 0.85;
-      animation: floaty 14s ease-in-out infinite;
-    }
-    .hero-blob-2 {
-      position: absolute;
-      width: 35%;
-      aspect-ratio: 1;
-      right: -2%;
-      bottom: 6%;
-      z-index: 1;
-      animation: floaty 11s ease-in-out infinite reverse;
-    }
+    .hero-card-sec:hover { transform:rotate(-1.5deg) translateY(-4px); }
+    .hero-card-sec img { width:100%; height:100%; object-fit:cover; }
     .hero-sticker {
-      position: absolute;
-      right: -8%;
-      top: 14%;
-      width: 130px;
-      height: 130px;
-      background: var(--cream);
-      border-radius: 999px;
-      box-shadow: var(--shadow-md);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 14px;
-      text-align: center;
-      font-family: var(--display);
-      font-style: italic;
-      font-size: 15px;
-      line-height: 1.2;
-      color: var(--caramel-deep);
-      transform: rotate(-8deg);
-      z-index: 3;
-      animation: floaty 8s ease-in-out infinite;
+      position:absolute; top:-14px; left:37%;
+      width:108px; height:108px; border-radius:50%;
+      background:var(--cream); box-shadow:var(--shadow-md);
+      display:flex; align-items:center; justify-content:center;
+      padding:12px; text-align:center;
+      font-family:var(--hand); font-size:16px; font-weight:600; line-height:1.3;
+      color:var(--blush-deep); z-index:5;
+      animation:stickerFloat 8s ease-in-out infinite;
     }
-    .hero-sticker::before {
-      content: "";
-      position: absolute;
-      inset: 8px;
-      border: 1px dashed var(--caramel);
-      border-radius: 999px;
-      opacity: 0.5;
-    }
-    @keyframes floaty {
-      0%, 100% { transform: translateY(0) rotate(0deg); }
-      50% { transform: translateY(-14px) rotate(2deg); }
-    }
-    /* Override floaty for sticker (it has its own rotate) */
-    .hero-sticker { animation-name: stickerFloat; }
-    @keyframes stickerFloat {
-      0%, 100% { transform: rotate(-8deg) translateY(0); }
-      50% { transform: rotate(-5deg) translateY(-10px); }
-    }
+    .hero-sticker::before { content:""; position:absolute; inset:7px; border:1.5px dashed var(--blush); border-radius:50%; opacity:.6; }
+    @keyframes stickerFloat { 0%,100%{transform:rotate(-6deg) translateY(0)} 50%{transform:rotate(-3deg) translateY(-10px)} }
 
-    /* Decorative wave divider */
-    .wave-divider {
-      width: 100%;
-      height: 40px;
-      display: block;
-      color: var(--caramel);
-      opacity: 0.45;
+    .hero-yarn {
+      position:absolute; right:-5%; bottom:8%; width:84px; z-index:4;
+      animation:floaty 10s ease-in-out infinite reverse;
     }
+    @keyframes floaty { 0%,100%{transform:translateY(0) rotate(0deg)} 50%{transform:translateY(-12px) rotate(4deg)} }
 
     /* ============================================================
-       SECTION COMMONS
+       PRODUCTS
        ============================================================ */
-    section { position: relative; z-index: 2; }
-    .section { padding: var(--section-y) 0; }
-    .section-head {
-      max-width: 640px;
-      margin-bottom: clamp(50px, 6vw, 80px);
+    .products { background:var(--cream-2); overflow:hidden; }
+    .products::before {
+      content:""; position:absolute; width:500px; height:500px; right:-200px; top:-100px;
+      background:radial-gradient(circle,rgba(244,168,188,.2),transparent 70%);
+      border-radius:50%; filter:blur(40px); pointer-events:none;
     }
-    .section-head.center {
-      margin-left: auto;
-      margin-right: auto;
-      text-align: center;
+    .products-head { display:flex; align-items:flex-end; justify-content:space-between; gap:32px; margin-bottom:clamp(44px,6vw,70px); flex-wrap:wrap; }
+    .products-head .section-head { margin-bottom:0; }
+    .products-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:22px; }
+
+    .product-card {
+      background:var(--white); border-radius:var(--r-xl); overflow:hidden;
+      box-shadow:var(--shadow-xs);
+      transition:transform .6s var(--ease-soft), box-shadow .6s var(--ease-soft);
     }
-    .section-head .eyebrow { margin-bottom: 18px; }
-    .section-head h2 {
-      font-size: clamp(34px, 4.2vw, 56px);
-      font-weight: 400;
-      line-height: 1.05;
-      margin-bottom: 18px;
-    }
-    .section-head h2 em {
-      font-style: italic;
-      color: var(--rose-deep);
-    }
-    .section-head p {
-      font-size: clamp(15px, 1.2vw, 17px);
-      color: var(--ink-soft);
-      max-width: 520px;
-      line-height: 1.7;
-    }
-    .section-head.center p { margin-left: auto; margin-right: auto; }
+    .product-card:hover { transform:translateY(-8px); box-shadow:var(--shadow-md); }
+    .product-img-wrap { position:relative; aspect-ratio:1/1; overflow:hidden; background:var(--cream-3); }
+    .product-img-wrap img { width:100%; height:100%; object-fit:cover; transition:transform .9s var(--ease-soft); }
+    .product-card:hover .product-img-wrap img { transform:scale(1.07); }
+    .product-badge { position:absolute; top:12px; left:12px; padding:5px 12px; border-radius:var(--r-pill); font-size:11px; font-weight:600; letter-spacing:.04em; text-transform:uppercase; }
+    .product-badge.pink     { background:rgba(244,168,188,.92); color:#fff; }
+    .product-badge.sage     { background:rgba(154,184,154,.92); color:#fff; }
+    .product-badge.lavender { background:rgba(202,184,236,.92); color:#fff; }
+    .product-body { padding:18px 20px 22px; }
+    .product-name { font-family:var(--display); font-size:19px; font-weight:500; color:var(--ink); margin-bottom:8px; line-height:1.2; }
+    .product-name em { font-style:italic; color:var(--blush-deep); }
+    .product-row { display:flex; align-items:center; justify-content:space-between; }
+    .product-price { font-size:15px; font-weight:600; color:var(--caramel-deep); }
+    .product-heart { width:34px; height:34px; border-radius:50%; background:var(--blush-soft); display:flex; align-items:center; justify-content:center; font-size:15px; transition:transform .4s var(--ease-spring), background .3s; }
+    .product-card:hover .product-heart { background:var(--blush); transform:scale(1.1); }
 
     /* ============================================================
-       WHY MISS KNIT
+       STORY
        ============================================================ */
-    .why {
-      background: var(--cream-2);
-      position: relative;
-      overflow: hidden;
-    }
-    .why::before {
-      content: "";
-      position: absolute;
-      width: 360px;
-      height: 360px;
-      right: -120px;
-      top: -120px;
-      background: radial-gradient(circle, rgba(232,165,152,0.28), transparent 70%);
-      border-radius: 50%;
-      filter: blur(20px);
-    }
-    .why-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-    }
+    .story { background:var(--cream-3); overflow:hidden; }
+    .story::before { content:""; position:absolute; width:380px; height:380px; left:-150px; bottom:-120px; background:radial-gradient(circle,rgba(154,184,154,.35),transparent 70%); border-radius:50%; filter:blur(36px); }
+    .story-grid { display:grid; grid-template-columns:1fr 1fr; gap:clamp(40px,7vw,90px); align-items:center; }
+    .story-text h2 { font-size:clamp(32px,4.2vw,56px); margin-bottom:24px; }
+    .story-text h2 em { font-style:italic; color:var(--sage); }
+    .story-text p { color:var(--ink-soft); font-size:16.5px; line-height:1.8; margin-bottom:16px; max-width:480px; }
+    .story-sign { margin-top:30px; font-family:var(--hand); font-size:22px; color:var(--caramel-deep); display:flex; align-items:center; gap:12px; }
+    .story-sign::before { content:""; width:36px; height:1.5px; background:var(--caramel); flex-shrink:0; }
+    .story-visual { position:relative; aspect-ratio:5/6; }
+    .story-img-main { position:absolute; inset:0 8% 8% 0; border-radius:var(--r-xl); overflow:hidden; box-shadow:var(--shadow-lg); transform:rotate(-2deg); z-index:2; }
+    .story-img-main img { width:100%; height:100%; object-fit:cover; }
+    .story-img-float { position:absolute; width:46%; aspect-ratio:1; right:0; bottom:0; border-radius:var(--r-lg); overflow:hidden; box-shadow:var(--shadow-md); transform:rotate(3deg); z-index:3; border:6px solid var(--white); }
+    .story-img-float img { width:100%; height:100%; object-fit:cover; }
+    .story-yarn { position:absolute; top:-18px; left:-22px; width:90px; animation:floaty 9s ease-in-out infinite; z-index:4; }
+
+    /* ============================================================
+       WHY CHOOSE US
+       ============================================================ */
+    .why { background:var(--cream); overflow:hidden; }
+    .why::after { content:""; position:absolute; width:350px; height:350px; right:-100px; bottom:-100px; background:radial-gradient(circle,rgba(202,184,236,.3),transparent 70%); border-radius:50%; filter:blur(30px); }
+    .why-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:20px; }
     .why-card {
-      background: var(--cream);
-      padding: 38px 30px 34px;
-      border-radius: var(--r-lg);
-      box-shadow: var(--shadow-sm);
-      transition: transform 0.6s var(--ease-soft),
-                  box-shadow 0.6s var(--ease-soft);
-      position: relative;
-      overflow: hidden;
+      background:var(--white); padding:34px 24px 30px; border-radius:var(--r-xl);
+      box-shadow:var(--shadow-xs); text-align:center;
+      transition:transform .6s var(--ease-soft), box-shadow .6s;
+      position:relative; overflow:hidden;
     }
-    .why-card:hover {
-      transform: translateY(-8px);
-      box-shadow: var(--shadow-md);
-    }
-    .why-card::after {
-      content: "";
-      position: absolute;
-      width: 80px; height: 80px;
-      bottom: -30px; right: -30px;
-      background: var(--rose-soft);
-      border-radius: 50%;
-      opacity: 0.35;
-      transition: transform 0.7s var(--ease-soft);
-    }
-    .why-card:hover::after { transform: scale(1.4); }
-    .why-card:nth-child(2)::after { background: var(--sage-soft); opacity: 0.45; }
-    .why-card:nth-child(3)::after { background: var(--caramel); opacity: 0.25; }
-    .why-emoji {
-      font-size: 38px;
-      display: inline-block;
-      margin-bottom: 22px;
-      filter: saturate(0.9);
-    }
-    .why-card h3 {
-      font-size: 24px;
-      font-weight: 500;
-      margin-bottom: 12px;
-    }
-    .why-card p {
-      color: var(--ink-soft);
-      font-size: 15.5px;
-      line-height: 1.65;
-    }
+    .why-card::after { content:""; position:absolute; width:100px; height:100px; bottom:-40px; right:-40px; border-radius:50%; transition:transform .7s var(--ease-soft); }
+    .why-card:nth-child(1)::after { background:var(--blush-soft); }
+    .why-card:nth-child(2)::after { background:var(--peach-soft); }
+    .why-card:nth-child(3)::after { background:var(--lavender-soft); }
+    .why-card:nth-child(4)::after { background:rgba(154,184,154,.22); }
+    .why-card:hover { transform:translateY(-7px); box-shadow:var(--shadow-sm); }
+    .why-card:hover::after { transform:scale(1.5); }
+    .why-icon { width:68px; height:68px; border-radius:50%; margin:0 auto 20px; display:flex; align-items:center; justify-content:center; font-size:30px; position:relative; z-index:1; }
+    .why-card:nth-child(1) .why-icon { background:var(--blush-soft); }
+    .why-card:nth-child(2) .why-icon { background:var(--peach-soft); }
+    .why-card:nth-child(3) .why-icon { background:var(--lavender-soft); }
+    .why-card:nth-child(4) .why-icon { background:rgba(154,184,154,.22); }
+    .why-card h3 { font-size:18px; font-weight:600; margin-bottom:10px; position:relative; z-index:1; }
+    .why-card p { color:var(--ink-soft); font-size:14.5px; line-height:1.65; position:relative; z-index:1; }
 
     /* ============================================================
-       KOLEKSI
+       HOW TO ORDER
        ============================================================ */
-    .collection {
-      position: relative;
-    }
-    .collection-head {
-      display: flex;
-      align-items: flex-end;
-      justify-content: space-between;
-      gap: 40px;
-      margin-bottom: 60px;
-      flex-wrap: wrap;
-    }
-    .collection-head .section-head { margin-bottom: 0; max-width: 540px; }
-    .collection-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 28px;
-    }
-    .product {
-      position: relative;
-      transition: transform 0.6s var(--ease-soft);
-    }
-    .product:hover { transform: translateY(-6px); }
-    .product-img {
-      position: relative;
-      aspect-ratio: 4 / 5;
-      border-radius: var(--r-lg);
-      overflow: hidden;
-      background: var(--cream-3);
-      box-shadow: var(--shadow-xs);
-      transition: box-shadow 0.6s var(--ease-soft);
-    }
-    .product:hover .product-img { box-shadow: var(--shadow-md); }
-    .product-img img {
-      width: 100%; height: 100%;
-      object-fit: cover;
-      transition: transform 0.9s var(--ease-soft);
-    }
-    .product:hover .product-img img { transform: scale(1.06); }
-    .product-badge {
-      position: absolute;
-      top: 16px; left: 16px;
-      padding: 7px 14px;
-      border-radius: var(--r-pill);
-      font-size: 11.5px;
-      font-weight: 500;
-      letter-spacing: 0.04em;
-      background: var(--cream);
-      color: var(--ink);
-      box-shadow: var(--shadow-xs);
-    }
-    .product-badge.rose { background: var(--rose); color: #fff; }
-    .product-badge.sage { background: var(--sage); color: #fff; }
-    .product-info {
-      padding: 22px 6px 0;
-    }
-    .product-name {
-      font-family: var(--display);
-      font-size: 22px;
-      font-weight: 500;
-      margin-bottom: 4px;
-      color: var(--ink);
-    }
-    .product-name em { font-style: italic; color: var(--rose-deep); font-weight: 400; }
-    .product-price {
-      color: var(--ink-mute);
-      font-size: 14.5px;
-    }
+    .steps { background:var(--cream-2); overflow:hidden; }
+    .steps-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:28px; position:relative; }
+    .steps-grid::before { content:""; position:absolute; top:50px; left:18%; right:18%; height:2px; background:repeating-linear-gradient(to right,var(--blush) 0,var(--blush) 6px,transparent 6px,transparent 14px); opacity:.5; }
+    .step { text-align:center; padding:0 14px; }
+    .step-icon { width:96px; height:96px; border-radius:50%; background:var(--white); margin:0 auto 24px; display:flex; align-items:center; justify-content:center; font-size:38px; box-shadow:var(--shadow-sm); position:relative; transition:transform .5s var(--ease-spring); }
+    .step:hover .step-icon { transform:scale(1.06) rotate(-4deg); }
+    .step-num { position:absolute; top:-8px; right:-8px; width:28px; height:28px; border-radius:50%; background:var(--blush); color:#fff; display:flex; align-items:center; justify-content:center; font-family:var(--hand); font-size:16px; font-weight:600; }
+    .step h3 { font-size:20px; font-weight:500; margin-bottom:10px; }
+    .step p { color:var(--ink-soft); font-size:14.5px; line-height:1.65; max-width:250px; margin:0 auto; }
 
     /* ============================================================
-       CARA PESAN
+       TESTIMONIALS
        ============================================================ */
-    .steps {
-      background: var(--cream-2);
-      overflow: hidden;
-    }
-    .steps-wrap {
-      position: relative;
-    }
-    .steps-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-      position: relative;
-    }
-    /* connecting wavy line on desktop */
-    .steps-line {
-      position: absolute;
-      top: 56px;
-      left: 13%;
-      right: 13%;
-      height: 30px;
-      color: var(--caramel);
-      opacity: 0.4;
-      z-index: 0;
-      pointer-events: none;
-    }
-    .step {
-      text-align: center;
-      padding: 0 12px;
-      position: relative;
-      z-index: 1;
-    }
-    .step-icon {
-      width: 92px;
-      height: 92px;
-      margin: 0 auto 26px;
-      border-radius: 50%;
-      background: var(--cream);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 38px;
-      box-shadow: var(--shadow-sm);
-      position: relative;
-      transition: transform 0.6s var(--ease-spring);
-    }
-    .step:hover .step-icon { transform: scale(1.06) rotate(-3deg); }
-    .step-num {
-      position: absolute;
-      top: -10px;
-      right: -10px;
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      background: var(--rose);
-      color: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: var(--display);
-      font-weight: 500;
-      font-size: 15px;
-      font-style: italic;
-    }
-    .step h3 {
-      font-size: 22px;
-      font-weight: 500;
-      margin-bottom: 10px;
-    }
-    .step p {
-      color: var(--ink-soft);
-      font-size: 15px;
-      line-height: 1.65;
-      max-width: 260px;
-      margin: 0 auto;
-    }
+    .testi-section { background:var(--cream); }
+    .testimoni-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
+    .testi { background:var(--white); border-radius:var(--r-xl); padding:32px 28px 26px; position:relative; box-shadow:var(--shadow-xs); transition:transform .6s var(--ease-soft), box-shadow .6s; }
+    .testi:hover { transform:translateY(-6px); box-shadow:var(--shadow-md); }
+    .testi-tape { position:absolute; top:-10px; left:28px; width:64px; height:20px; border-radius:2px; opacity:.75; transform:rotate(-2deg); }
+    .testi:nth-child(1) .testi-tape { background:var(--blush); }
+    .testi:nth-child(2) .testi-tape { background:var(--peach); }
+    .testi:nth-child(3) .testi-tape { background:var(--lavender); }
+    .testi-stars { font-size:15px; letter-spacing:3px; color:var(--caramel); margin-bottom:14px; }
+    .testi-quote { font-family:var(--display); font-size:17.5px; line-height:1.55; color:var(--ink); margin-bottom:20px; }
+    .testi-author { display:flex; align-items:center; gap:12px; padding-top:16px; border-top:1px solid var(--line); }
+    .testi-avatar { width:40px; height:40px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:var(--display); font-weight:500; font-size:16px; color:#fff; flex-shrink:0; }
+    .testi:nth-child(1) .testi-avatar { background:linear-gradient(135deg,var(--blush),var(--blush-deep)); }
+    .testi:nth-child(2) .testi-avatar { background:linear-gradient(135deg,var(--peach),var(--caramel)); }
+    .testi:nth-child(3) .testi-avatar { background:linear-gradient(135deg,var(--lavender),#9B7CE0); }
+    .testi-name { font-weight:600; font-size:14.5px; }
+    .testi-city { font-size:12.5px; color:var(--ink-mute); }
 
     /* ============================================================
-       TESTIMONI
+       SOCIAL CTA
        ============================================================ */
-    .testimoni-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 26px;
-    }
-    .testi {
-      background: var(--cream);
-      border: 1px solid var(--line);
-      border-radius: var(--r-lg);
-      padding: 36px 30px 30px;
-      position: relative;
-      transition: transform 0.6s var(--ease-soft),
-                  box-shadow 0.6s var(--ease-soft),
-                  border-color 0.4s var(--ease-soft);
-    }
-    .testi:hover {
-      transform: translateY(-6px);
-      box-shadow: var(--shadow-md);
-      border-color: var(--rose-soft);
-    }
-    .testi-tape {
-      position: absolute;
-      top: -12px;
-      left: 30px;
-      width: 70px;
-      height: 22px;
-      background: var(--rose-soft);
-      opacity: 0.7;
-      transform: rotate(-3deg);
-      border-radius: 2px;
-    }
-    .testi:nth-child(2) .testi-tape { background: var(--sage-soft); }
-    .testi:nth-child(3) .testi-tape { background: var(--caramel); opacity: 0.5; }
-    .testi-stars {
-      color: var(--caramel);
-      font-size: 14px;
-      letter-spacing: 4px;
-      margin-bottom: 16px;
-    }
-    .testi-quote {
-      font-family: var(--display);
-      font-size: 19px;
-      line-height: 1.5;
-      color: var(--ink);
-      margin-bottom: 22px;
-      font-weight: 400;
-    }
-    .testi-author {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      padding-top: 18px;
-      border-top: 1px solid var(--line);
-    }
-    .testi-avatar {
-      width: 42px;
-      height: 42px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, var(--rose-soft), var(--caramel));
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: var(--display);
-      font-weight: 500;
-      color: #fff;
-      font-size: 17px;
-    }
-    .testi:nth-child(2) .testi-avatar { background: linear-gradient(135deg, var(--sage-soft), var(--sage)); }
-    .testi:nth-child(3) .testi-avatar { background: linear-gradient(135deg, var(--caramel), var(--rose-deep)); }
-    .testi-name {
-      font-weight: 500;
-      font-size: 15px;
-      color: var(--ink);
-    }
-    .testi-city {
-      font-size: 13px;
-      color: var(--ink-mute);
-    }
+    .social-cta { background:linear-gradient(135deg,#FEF0F5 0%,#F8EDFB 50%,#EEF4FF 100%); overflow:hidden; }
+    .social-cta::before { content:""; position:absolute; width:400px; height:400px; top:-150px; right:-150px; background:radial-gradient(circle,rgba(202,184,236,.4),transparent 70%); border-radius:50%; filter:blur(30px); }
+    .social-inner { text-align:center; max-width:680px; margin:0 auto; }
+    .social-inner h2 { font-size:clamp(30px,4vw,50px); margin-bottom:14px; }
+    .social-inner h2 em { font-style:italic; color:var(--blush-deep); }
+    .social-inner > p { color:var(--ink-soft); font-size:16px; margin-bottom:40px; line-height:1.7; }
+    .social-cards { display:flex; gap:20px; justify-content:center; flex-wrap:wrap; margin-bottom:36px; }
+    .social-card { display:flex; align-items:center; gap:16px; background:var(--white); padding:20px 28px; border-radius:var(--r-xl); box-shadow:var(--shadow-sm); transition:transform .5s var(--ease-soft), box-shadow .5s; min-width:220px; }
+    .social-card:hover { transform:translateY(-5px); box-shadow:var(--shadow-md); }
+    .social-icon { width:52px; height:52px; border-radius:var(--r-md); display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+    .social-icon.ig { background:linear-gradient(135deg,#F9CE34,#EE2A7B,#6228D7); }
+    .social-icon.tt { background:#000; }
+    .social-icon svg { width:26px; height:26px; color:#fff; }
+    .social-card-text { text-align:left; }
+    .social-label { font-size:11px; font-weight:600; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-mute); margin-bottom:3px; }
+    .social-handle { font-family:var(--display); font-size:19px; font-weight:500; color:var(--ink); }
+    .social-hand { font-family:var(--hand); font-size:20px; color:var(--caramel-deep); display:block; }
 
     /* ============================================================
-       CERITA BRAND
+       FAQ
        ============================================================ */
-    .story {
-      background: var(--cream-3);
-      position: relative;
-      overflow: hidden;
+    .faq { background:var(--cream-2); }
+    .faq-list { max-width:760px; margin:0 auto; display:flex; flex-direction:column; gap:12px; }
+    .faq-item { background:var(--white); border-radius:var(--r-lg); overflow:hidden; box-shadow:var(--shadow-xs); transition:box-shadow .3s; }
+    .faq-item.open { box-shadow:var(--shadow-sm); }
+    .faq-q {
+      width:100%; display:flex; align-items:center; justify-content:space-between; gap:20px;
+      padding:22px 26px; text-align:left;
+      font-family:var(--display); font-size:19px; font-weight:500; color:var(--ink); cursor:pointer; transition:color .3s;
     }
-    .story::before {
-      content: "";
-      position: absolute;
-      width: 420px; height: 420px;
-      left: -180px; bottom: -180px;
-      background: radial-gradient(circle, rgba(154, 174, 154, 0.4), transparent 70%);
-      border-radius: 50%;
-      filter: blur(30px);
-    }
-    .story-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: clamp(40px, 6vw, 90px);
-      align-items: center;
-    }
-    .story-text .eyebrow { margin-bottom: 22px; }
-    .story-text h2 {
-      font-size: clamp(34px, 4.4vw, 58px);
-      font-weight: 400;
-      line-height: 1.05;
-      margin-bottom: 28px;
-    }
-    .story-text h2 em {
-      font-style: italic;
-      color: var(--sage);
-    }
-    .story-text p {
-      color: var(--ink-soft);
-      font-size: 17px;
-      line-height: 1.8;
-      margin-bottom: 18px;
-      max-width: 480px;
-    }
-    .story-sign {
-      margin-top: 36px;
-      display: inline-flex;
-      align-items: center;
-      gap: 14px;
-      font-family: var(--display);
-      font-style: italic;
-      font-size: 18px;
-      color: var(--caramel-deep);
-    }
-    .story-sign::before {
-      content: "";
-      width: 40px; height: 1px;
-      background: var(--caramel);
-    }
-    .story-visual {
-      position: relative;
-      aspect-ratio: 5 / 6;
-    }
-    .story-img-card {
-      position: absolute;
-      inset: 0 8% 8% 0;
-      border-radius: var(--r-xl);
-      overflow: hidden;
-      box-shadow: var(--shadow-lg);
-      transform: rotate(-2deg);
-      z-index: 2;
-    }
-    .story-img-card img { width: 100%; height: 100%; object-fit: cover; }
-    .story-img-2 {
-      position: absolute;
-      width: 48%;
-      aspect-ratio: 1;
-      right: 0;
-      bottom: 0;
-      border-radius: var(--r-lg);
-      overflow: hidden;
-      box-shadow: var(--shadow-md);
-      transform: rotate(3deg);
-      z-index: 3;
-      border: 8px solid var(--cream);
-    }
-    .story-img-2 img { width: 100%; height: 100%; object-fit: cover; }
-    .story-yarn {
-      position: absolute;
-      width: 110px;
-      top: -20px; left: -30px;
-      z-index: 4;
-      animation: floaty 9s ease-in-out infinite;
-    }
+    .faq-item.open .faq-q { color:var(--blush-deep); }
+    .faq-icon { width:32px; height:32px; border-radius:50%; background:var(--blush-soft); display:flex; align-items:center; justify-content:center; flex-shrink:0; transition:transform .4s var(--ease-soft), background .3s; }
+    .faq-icon svg { width:14px; height:14px; color:var(--blush-deep); transition:color .3s; }
+    .faq-item.open .faq-icon { background:var(--blush); transform:rotate(45deg); }
+    .faq-item.open .faq-icon svg { color:#fff; }
+    .faq-a { max-height:0; overflow:hidden; transition:max-height .5s var(--ease-soft); }
+    .faq-item.open .faq-a { max-height:300px; }
+    .faq-a-inner { padding:0 26px 24px; color:var(--ink-soft); font-size:15.5px; line-height:1.75; }
 
     /* ============================================================
        FINAL CTA
        ============================================================ */
-    .cta {
-      padding: var(--section-y) 0;
-      position: relative;
-      overflow: hidden;
+    .final-cta { padding:var(--section-y) 0; }
+    .cta-box {
+      background:linear-gradient(135deg,#FDDDE6 0%,#F4A8BC 50%,#E0789A 100%);
+      border-radius:var(--r-2xl); padding:clamp(60px,9vw,110px) clamp(30px,5vw,80px);
+      text-align:center; position:relative; overflow:hidden; box-shadow:var(--shadow-pink);
     }
-    .cta-inner {
-      background: linear-gradient(135deg, #F2C5BC 0%, #E8A598 55%, #D78A7B 100%);
-      border-radius: var(--r-xl);
-      padding: clamp(60px, 8vw, 100px) clamp(30px, 5vw, 80px);
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-      box-shadow: var(--shadow-lg);
-    }
-    .cta-inner::before {
-      content: "";
-      position: absolute;
-      width: 320px; height: 320px;
-      top: -100px; left: -100px;
-      background: rgba(255, 255, 255, 0.18);
-      border-radius: 50%;
-      filter: blur(20px);
-    }
-    .cta-inner::after {
-      content: "";
-      position: absolute;
-      width: 240px; height: 240px;
-      bottom: -80px; right: -60px;
-      background: rgba(196, 149, 106, 0.25);
-      border-radius: 50%;
-      filter: blur(20px);
-    }
-    .cta-inner > * { position: relative; z-index: 2; }
-    .cta .eyebrow { color: rgba(255,255,255,0.85); margin-bottom: 22px; }
-    .cta .eyebrow::before { background: rgba(255,255,255,0.6); }
-    .cta h2 {
-      font-size: clamp(38px, 5vw, 64px);
-      color: #fff;
-      font-weight: 400;
-      line-height: 1.05;
-      margin-bottom: 22px;
-      letter-spacing: -0.02em;
-    }
-    .cta h2 em { font-style: italic; }
-    .cta-sub {
-      color: rgba(255, 255, 255, 0.9);
-      font-size: 17px;
-      max-width: 480px;
-      margin: 0 auto 38px;
-      line-height: 1.65;
-    }
-    .cta-buttons {
-      display: inline-flex;
-      gap: 16px;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    .cta .btn-primary {
-      background: var(--cream);
-      color: var(--ink);
-      box-shadow: 0 18px 40px -16px rgba(74, 48, 28, 0.35);
-    }
-    .cta .btn-primary:hover {
-      background: #fff;
-      color: var(--ink);
-    }
-    .cta .btn-outline {
-      border-color: rgba(255,255,255,0.8);
-      color: #fff;
-    }
-    .cta .btn-outline:hover {
-      background: #fff;
-      color: var(--ink);
-      border-color: #fff;
-    }
+    .cta-box::before { content:""; position:absolute; width:300px; height:300px; top:-80px; left:-80px; background:rgba(255,255,255,.2); border-radius:50%; filter:blur(16px); }
+    .cta-box::after  { content:""; position:absolute; width:220px; height:220px; bottom:-60px; right:-50px; background:rgba(196,149,106,.2); border-radius:50%; filter:blur(16px); }
+    .cta-box > * { position:relative; z-index:2; }
+    .cta-box .eyebrow { color:rgba(255,255,255,.88); }
+    .cta-box .eyebrow::before { background:rgba(255,255,255,.6); }
+    .cta-title { font-size:clamp(36px,5vw,62px); color:#fff; line-height:1.06; margin:20px 0 18px; }
+    .cta-title em { font-style:italic; }
+    .cta-sub { color:rgba(255,255,255,.9); font-size:17px; max-width:460px; margin:0 auto 36px; line-height:1.65; }
+    .cta-btns { display:inline-flex; gap:14px; flex-wrap:wrap; justify-content:center; }
+    .cta-box .btn-primary { background:var(--white); color:var(--blush-deep); box-shadow:0 16px 36px -12px rgba(44,32,21,.25); }
+    .cta-box .btn-primary:hover { background:var(--cream); color:var(--blush-deep); }
+    .cta-box .btn-ghost { background:rgba(255,255,255,.2); color:#fff; border:1.5px solid rgba(255,255,255,.5); }
+    .cta-box .btn-ghost:hover { background:rgba(255,255,255,.35); color:#fff; }
+    .cta-deco { position:absolute; font-size:24px; opacity:.5; pointer-events:none; }
+    .cta-deco-1 { top:18%; left:6%;  animation:floaty 7s ease-in-out infinite; }
+    .cta-deco-2 { bottom:22%; left:10%; animation:floaty 9s ease-in-out infinite reverse; }
+    .cta-deco-3 { top:14%; right:8%;  animation:floaty 8s ease-in-out infinite 1s; }
+    .cta-deco-4 { bottom:18%; right:6%; animation:floaty 6s ease-in-out infinite reverse .5s; }
 
     /* ============================================================
        FOOTER
        ============================================================ */
-    .footer {
-      padding: 50px 0 40px;
-      border-top: 1px solid var(--line);
-    }
-    .footer-inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 24px;
-      flex-wrap: wrap;
-    }
-    .footer-left {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-    }
-    .footer-tag {
-      font-family: var(--display);
-      font-style: italic;
-      color: var(--ink-mute);
-      font-size: 15px;
-    }
-    .footer-copy {
-      font-size: 13.5px;
-      color: var(--ink-mute);
-    }
-    .footer-social {
-      display: flex;
-      gap: 12px;
-    }
-    .footer-social a {
-      width: 40px; height: 40px;
-      border-radius: 50%;
-      border: 1px solid var(--line);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--ink-soft);
-      transition: all 0.3s var(--ease-soft);
-    }
-    .footer-social a:hover {
-      background: var(--rose);
-      color: #fff;
-      border-color: var(--rose);
-      transform: translateY(-2px);
-    }
-    .footer-social svg { width: 16px; height: 16px; }
+    .footer { background:var(--cream-3); padding:64px 0 0; border-top:1px solid var(--line); }
+    .footer-grid { display:grid; grid-template-columns:2fr 1fr 1fr 1.5fr; gap:clamp(30px,5vw,60px); padding-bottom:48px; }
+    .footer-brand .logo { margin-bottom:14px; }
+    .footer-tagline { font-family:var(--hand); font-size:18px; color:var(--caramel-deep); margin-bottom:16px; display:block; }
+    .footer-desc { font-size:14px; color:var(--ink-mute); line-height:1.7; max-width:260px; margin-bottom:20px; }
+    .footer-socials { display:flex; gap:10px; }
+    .footer-socials a { width:38px; height:38px; border-radius:50%; border:1.5px solid var(--line); display:flex; align-items:center; justify-content:center; color:var(--ink-soft); transition:all .3s; }
+    .footer-socials a:hover { background:var(--blush); color:#fff; border-color:var(--blush); transform:translateY(-2px); }
+    .footer-socials svg { width:15px; height:15px; }
+    .footer-col h4 { font-family:var(--body); font-size:12px; font-weight:700; letter-spacing:.2em; text-transform:uppercase; color:var(--ink-mute); margin-bottom:18px; }
+    .footer-col ul { list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:10px; }
+    .footer-col ul li a { font-size:14.5px; color:var(--ink-soft); transition:color .3s; }
+    .footer-col ul li a:hover { color:var(--blush-deep); }
+    .footer-info { display:flex; align-items:flex-start; gap:10px; font-size:14px; color:var(--ink-soft); margin-bottom:12px; line-height:1.5; }
+    .footer-info svg { width:15px; height:15px; flex-shrink:0; margin-top:2px; color:var(--blush); }
+    .footer-bottom { border-top:1px solid var(--line); padding:20px 0; }
+    .footer-bottom-inner { display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; font-size:13px; color:var(--ink-mute); }
+    .footer-bottom-inner a:hover { color:var(--blush-deep); }
 
     /* ============================================================
        SCROLL REVEAL
        ============================================================ */
-    [data-animate] {
-      opacity: 0;
-      transition: opacity 0.9s var(--ease-soft), transform 0.9s var(--ease-soft);
-      will-change: opacity, transform;
-    }
-    [data-animate="fade-up"]    { transform: translateY(32px); }
-    [data-animate="fade-right"] { transform: translateX(-32px); }
-    [data-animate="fade-left"]  { transform: translateX(32px); }
-    [data-animate="zoom"]       { transform: scale(0.94); }
-    [data-animate].is-visible {
-      opacity: 1;
-      transform: none;
-    }
-    [data-delay="100"] { transition-delay: 100ms; }
-    [data-delay="200"] { transition-delay: 200ms; }
-    [data-delay="300"] { transition-delay: 300ms; }
-    [data-delay="400"] { transition-delay: 400ms; }
-    [data-delay="500"] { transition-delay: 500ms; }
-
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after {
-        animation-duration: 0.01ms !important;
-        transition-duration: 0.01ms !important;
-      }
-      [data-animate] { opacity: 1; transform: none; }
-    }
+    [data-animate] { opacity:0; transition:opacity .85s var(--ease-soft), transform .85s var(--ease-soft); will-change:opacity,transform; }
+    [data-animate="fade-up"]    { transform:translateY(28px); }
+    [data-animate="fade-right"] { transform:translateX(-28px); }
+    [data-animate="fade-left"]  { transform:translateX(28px); }
+    [data-animate="zoom"]       { transform:scale(.94); }
+    [data-animate].is-visible   { opacity:1; transform:none; }
+    [data-delay="100"] { transition-delay:100ms; }
+    [data-delay="200"] { transition-delay:200ms; }
+    [data-delay="300"] { transition-delay:300ms; }
+    [data-delay="400"] { transition-delay:400ms; }
+    [data-delay="500"] { transition-delay:500ms; }
+    [data-delay="600"] { transition-delay:600ms; }
+    @media (prefers-reduced-motion:reduce) { *,*::before,*::after { animation-duration:.01ms!important; transition-duration:.01ms!important; } [data-animate]{opacity:1;transform:none;} }
 
     /* ============================================================
        RESPONSIVE
        ============================================================ */
-    @media (max-width: 960px) {
-      .hero { padding-top: 130px; }
-      .hero-grid { grid-template-columns: 1fr; gap: 60px; }
-      .hero-visual { max-width: 480px; margin: 0 auto; width: 100%; }
-      .why-grid, .steps-grid, .testimoni-grid { grid-template-columns: 1fr; gap: 18px; }
-      .steps-line { display: none; }
-      .collection-grid { grid-template-columns: repeat(2, 1fr); gap: 22px; }
-      .story-grid { grid-template-columns: 1fr; gap: 50px; }
-      .story-visual { max-width: 460px; margin: 0 auto; width: 100%; }
-      .collection-head { flex-direction: column; align-items: flex-start; gap: 24px; }
+    @media (max-width:1024px) {
+      .why-grid { grid-template-columns:repeat(2,1fr); }
+      .footer-grid { grid-template-columns:1fr 1fr; }
     }
-    @media (max-width: 720px) {
-      .nav-links { display: none; }
-      .nav-toggle { display: inline-flex; }
-      .nav-cta { display: none; }
-      .hero h1 { font-size: clamp(40px, 11vw, 56px); }
-      .section-head h2 { font-size: clamp(30px, 8vw, 42px); }
-      .hero-sticker { width: 100px; height: 100px; font-size: 13px; right: -4%; }
-      .hero-cta-row { gap: 12px; }
-      .hero-meta { font-size: 12.5px; }
-      .footer-inner { justify-content: center; text-align: center; }
+    @media (max-width:900px) {
+      .hero { padding-top:120px; }
+      .hero-grid { grid-template-columns:1fr; }
+      .hero-visual { max-width:420px; margin:0 auto; width:100%; }
+      .products-grid { grid-template-columns:repeat(2,1fr); }
+      .story-grid { grid-template-columns:1fr; }
+      .story-visual { max-width:440px; margin:0 auto; width:100%; }
+      .steps-grid { grid-template-columns:1fr; }
+      .steps-grid::before { display:none; }
+      .testimoni-grid { grid-template-columns:1fr; }
+      .products-head { flex-direction:column; align-items:flex-start; }
     }
-    @media (max-width: 480px) {
-      .btn { padding: 14px 22px; font-size: 14.5px; }
-      .collection-grid { grid-template-columns: 1fr; gap: 22px; }
-      .product-img { aspect-ratio: 5 / 5; }
-      .cta-inner { padding: 50px 24px; }
+    @media (max-width:720px) {
+      .nav-links, .nav-cta { display:none; }
+      .nav-toggle { display:flex; }
+      .sticky-order { display:block; }
+      body { padding-bottom:72px; }
+      .wa-float { bottom:90px; }
     }
-
-    /* Hidden mobile nav drawer */
-    .mobile-drawer {
-      position: fixed;
-      inset: 0;
-      background: rgba(250, 246, 240, 0.98);
-      backdrop-filter: blur(8px);
-      z-index: 99;
-      padding: 110px 30px 30px;
-      transform: translateY(-100%);
-      transition: transform 0.5s var(--ease-soft);
-      pointer-events: none;
+    @media (max-width:540px) {
+      .products-grid { grid-template-columns:1fr; }
+      .why-grid { grid-template-columns:1fr; }
+      .footer-grid { grid-template-columns:1fr; }
+      .social-cards { flex-direction:column; align-items:center; }
+      .cta-box { padding:48px 24px; }
     }
-    .mobile-drawer.open {
-      transform: translateY(0);
-      pointer-events: auto;
-    }
-    .mobile-drawer a {
-      display: block;
-      font-family: var(--display);
-      font-size: 32px;
-      font-weight: 400;
-      color: var(--ink);
-      padding: 18px 0;
-      border-bottom: 1px solid var(--line);
-    }
-    .mobile-drawer a:last-of-type { border-bottom: none; }
-    .mobile-drawer .btn { margin-top: 24px; width: 100%; }
   </style>
 </head>
 <body>
 
-  <!-- ================================================
-       NAVBAR
-       ================================================ -->
+  <!-- WhatsApp floating -->
+  <a href="https://wa.me/6281234567890?text=Halo%20daenuna.co%2C%20saya%20mau%20order%20custom%20boneka%20rajut%20%F0%9F%A7%B6"
+     target="_blank" rel="noopener" class="wa-float" aria-label="Chat WhatsApp daenuna.co">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+      <path d="M12 0C5.373 0 0 5.373 0 12c0 2.139.563 4.143 1.549 5.874L.057 23.985l6.304-1.464A11.934 11.934 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.927 0-3.727-.508-5.279-1.394l-.379-.225-3.93.913.934-3.842-.246-.393A9.957 9.957 0 0 1 2 12c0-5.514 4.486-10 10-10s10 4.486 10 10-4.486 10-10 10z"/>
+    </svg>
+  </a>
+
+  <!-- Mobile sticky CTA -->
+  <div class="sticky-order">
+    <a href="https://wa.me/6281234567890?text=Halo%20daenuna.co%2C%20saya%20mau%20order%20custom!"
+       target="_blank" rel="noopener" class="btn btn-primary">
+      Order Custom Now 🧶
+    </a>
+  </div>
+
+  <!-- ================================================ NAVBAR ================================================ -->
   <nav class="nav" id="nav">
     <div class="container nav-inner">
-      <a href="#" class="logo" aria-label="Miss Knit — Home">
-        <svg class="logo-mark" viewBox="0 0 40 40" fill="none" aria-hidden="true">
-          <circle cx="20" cy="20" r="17" fill="#E8A598"/>
-          <path d="M11 20c0-5 4-9 9-9s9 4 9 9-4 9-9 9" stroke="#FAF6F0" stroke-width="1.8" stroke-linecap="round"/>
-          <path d="M14 17c2 1 4 1 6 0M14 23c2-1 4-1 6 0M20 11v18" stroke="#FAF6F0" stroke-width="1.4" stroke-linecap="round" opacity="0.7"/>
-        </svg>
-        <span>Miss Knit</span>
+      <a href="#" class="logo" aria-label="daenuna.co — Beranda">
+        <img src="assets/logo.jpg" class="logo-img" alt="daenuna.co" />
+        <span>daenuna.co</span>
       </a>
       <div class="nav-links">
         <a href="#koleksi">Koleksi</a>
-        <a href="#pesan">Cara Pesan</a>
-        <a href="#cerita">Cerita Kami</a>
+        <a href="#cerita">Cerita</a>
+        <a href="#faq">FAQ</a>
         <a href="#kontak">Kontak</a>
       </div>
-      <a href="https://wa.me/6281234567890" target="_blank" rel="noopener" class="btn btn-primary nav-cta">
-        Pesan Sekarang
+      <a href="https://wa.me/6281234567890?text=Halo%20daenuna.co%2C%20saya%20mau%20order%20custom!"
+         target="_blank" rel="noopener" class="btn btn-primary nav-cta">
+        Order Custom ✦
       </a>
-      <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false">
-        <span></span>
+      <button class="nav-toggle" id="navToggle" aria-label="Buka menu" aria-expanded="false">
+        <div class="nav-toggle-lines" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </div>
       </button>
     </div>
   </nav>
 
   <!-- Mobile drawer -->
-  <div class="mobile-drawer" id="mobileDrawer" role="dialog" aria-label="Mobile navigation">
-    <a href="#koleksi">Koleksi</a>
-    <a href="#pesan">Cara Pesan</a>
-    <a href="#cerita">Cerita Kami</a>
-    <a href="#kontak">Kontak</a>
-    <a href="https://wa.me/6281234567890" target="_blank" rel="noopener" class="btn btn-primary">Pesan Sekarang →</a>
+  <div class="mobile-drawer" id="mobileDrawer" role="dialog" aria-label="Menu navigasi">
+    <nav>
+      <a href="#koleksi">Koleksi</a>
+      <a href="#cerita">Cerita Kami</a>
+      <a href="#faq">FAQ</a>
+      <a href="#kontak">Kontak</a>
+    </nav>
+    <a href="https://wa.me/6281234567890?text=Halo%20daenuna.co%2C%20saya%20mau%20order%20custom!"
+       target="_blank" rel="noopener" class="btn btn-primary">
+      Order Custom Now 🧶
+    </a>
   </div>
 
-  <!-- ================================================
-       HERO
-       ================================================ -->
-  <header class="hero">
+  <!-- ================================================ HERO ================================================ -->
+  <header class="hero" id="home">
+    <div class="hero-bg-blob hero-bg-1" aria-hidden="true"></div>
+    <div class="hero-bg-blob hero-bg-2" aria-hidden="true"></div>
+
     <div class="container hero-grid">
       <div class="hero-text">
-        <span class="eyebrow hero-eyebrow" data-animate="fade-up">Handmade · Sejak hati</span>
+        <span class="eyebrow hero-eyebrow" data-animate="fade-up">✦ Handmade dari Yogyakarta</span>
         <h1 data-animate="fade-up" data-delay="100">
-          Boneka Rajut yang <em>Dibuat Khusus</em> Untukmu
+          Boneka Rajut yang<br/><em>Dibuat Khusus</em><br/>Untukmu ♡
         </h1>
-        <p class="hero-sub" data-animate="fade-up" data-delay="200">
-          Setiap boneka punya cerita — dan ceritamu bisa dimulai di sini. Dirajut tangan dengan benang lembut dan sabar yang tak terburu-buru.
+        <p class="hero-tagline" data-animate="fade-up" data-delay="150">
+          "made with love, stitched for you"
         </p>
-        <div class="hero-cta-row" data-animate="fade-up" data-delay="300">
-          <a href="https://wa.me/6281234567890" target="_blank" rel="noopener" class="btn btn-primary">
-            Pesan Sekarang <span class="arrow">→</span>
+        <p class="hero-sub" data-animate="fade-up" data-delay="200">
+          Amigurumi &amp; keychain rajut 100% handmade. Custom karakter, warna, dan ukuran sesuai keinginanmu — dirajut pelan-pelan dengan cinta dari Yogya.
+        </p>
+        <div class="hero-cta-row" data-animate="fade-up" data-delay="280">
+          <a href="https://wa.me/6281234567890?text=Halo%20daenuna.co%2C%20saya%20mau%20order%20custom!"
+             target="_blank" rel="noopener" class="btn btn-primary">
+            Order Custom Now <span class="arrow">→</span>
           </a>
-          <div class="hero-meta">
-            <span class="dot"></span>
-            <span>Open order minggu ini</span>
-          </div>
+          <a href="#koleksi" class="btn btn-outline">Lihat Koleksi</a>
+        </div>
+        <div class="hero-trust" data-animate="fade-up" data-delay="360">
+          <div class="hero-trust-item"><span class="trust-dot green"></span>Open Order</div>
+          <div class="hero-trust-item"><span class="trust-dot pink"></span>100% Handmade</div>
+          <div class="hero-trust-item"><span class="trust-dot peach"></span>Custom Request ✓</div>
         </div>
       </div>
 
       <div class="hero-visual" data-animate="zoom" data-delay="200">
-        <!-- Organic blob behind -->
-        <svg class="hero-blob" viewBox="0 0 200 200" fill="none" aria-hidden="true">
-          <path d="M40,-65C52,-58,62,-46,69,-32C76,-18,80,-2,77,13C73,28,62,42,49,52C36,62,21,68,4,67C-13,66,-31,57,-44,45C-58,32,-67,17,-69,1C-71,-15,-66,-32,-55,-43C-44,-54,-28,-60,-12,-67C5,-74,28,-72,40,-65Z" transform="translate(100 100)" fill="#F2C5BC"/>
-        </svg>
-        <svg class="hero-blob-2" viewBox="0 0 200 200" fill="none" aria-hidden="true">
-          <path d="M52,-68C66,-58,75,-41,77,-23C79,-5,75,14,65,29C55,44,40,55,23,63C5,71,-15,76,-30,69C-44,62,-53,42,-61,23C-69,3,-76,-15,-72,-32C-69,-50,-55,-67,-39,-74C-22,-81,-1,-78,17,-77C36,-76,38,-78,52,-68Z" transform="translate(100 100)" fill="#BBC9BA"/>
-        </svg>
-
-        <!-- Main hero image -->
-        <div class="hero-img-card">
-          <img src="https://images.unsplash.com/photo-1612187028762-fe24e2f24d4d?w=900&q=85&auto=format&fit=crop" alt="Boneka rajut handmade dengan benang lembut warna pastel" loading="eager" />
+        <div class="hero-card-main">
+          <img src="assets/nailong.jpg" alt="Amigurumi Nailong — boneka rajut handmade daenuna.co" loading="eager" />
         </div>
-
-        <!-- Decorative round sticker -->
-        <div class="hero-sticker" aria-hidden="true">
-          Dibuat<br/>dengan<br/>♡ cinta
+        <div class="hero-card-sec">
+          <img src="assets/peach-kitten.jpg" alt="Amigurumi Peach Kitten — boneka rajut handmade daenuna.co" loading="eager" />
         </div>
+        <div class="hero-sticker" aria-hidden="true">dibuat<br/>dengan<br/>♡ cinta</div>
+        <svg class="hero-yarn" viewBox="0 0 100 100" fill="none" aria-hidden="true">
+          <circle cx="50" cy="50" r="42" fill="#F4A8BC"/>
+          <path d="M14 50Q30 35 50 50T86 50M14 50Q30 65 50 50T86 50M30 18Q40 40 50 50T70 82M30 82Q40 60 50 50T70 18" stroke="#fff" stroke-width="1.5" stroke-linecap="round" opacity=".7"/>
+          <circle cx="50" cy="50" r="42" stroke="#E0789A" stroke-width="1" fill="none" opacity=".4"/>
+        </svg>
       </div>
     </div>
   </header>
 
-  <!-- ================================================
-       WHY MISS KNIT
-       ================================================ -->
-  <section class="section why">
+  <!-- ================================================ PRODUCTS ================================================ -->
+  <section class="section products" id="koleksi">
     <div class="container">
-      <div class="section-head center">
-        <span class="eyebrow" data-animate="fade-up">Kenapa Miss Knit</span>
-        <h2 data-animate="fade-up" data-delay="100">Bukan sekadar boneka — <em>kenangan yang bisa dipeluk</em></h2>
-      </div>
-
-      <div class="why-grid">
-        <article class="why-card" data-animate="fade-up" data-delay="100">
-          <span class="why-emoji" aria-hidden="true">🤲</span>
-          <h3>100% Handmade</h3>
-          <p>Dibuat tangan satu per satu, bukan mesin. Setiap simpulnya dijahit sambil mendengar musik favorit.</p>
-        </article>
-        <article class="why-card" data-animate="fade-up" data-delay="200">
-          <span class="why-emoji" aria-hidden="true">🎨</span>
-          <h3>Bisa Custom</h3>
-          <p>Warna, ukuran, ekspresi — sesuai keinginanmu. Cerita kamu, kami yang merajutnya.</p>
-        </article>
-        <article class="why-card" data-animate="fade-up" data-delay="300">
-          <span class="why-emoji" aria-hidden="true">🏡</span>
-          <h3>Produk Lokal</h3>
-          <p>Buatan pengrajin lokal Indonesia dengan hati. Setiap pesanan kamu memberi semangat baru.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================================================
-       KOLEKSI
-       ================================================ -->
-  <section class="section collection" id="koleksi">
-    <div class="container">
-      <div class="collection-head">
-        <div class="section-head" style="margin-bottom:0;">
+      <div class="products-head">
+        <div class="section-head" style="margin-bottom:0">
           <span class="eyebrow" data-animate="fade-up">Koleksi Terbaru</span>
-          <h2 data-animate="fade-up" data-delay="100">Pilih teman <em>peluk</em> kamu</h2>
-          <p data-animate="fade-up" data-delay="200">Setiap karakter dirajut dengan kepribadian sendiri. Pilih yang paling bikin hati hangat.</p>
+          <h2 data-animate="fade-up" data-delay="100">Pilih teman <em>peluk</em> favoritmu</h2>
+          <p data-animate="fade-up" data-delay="200">Setiap karakter dirajut satu per satu dengan penuh kesabaran dan cinta.</p>
         </div>
-        <a href="https://wa.me/6281234567890" target="_blank" rel="noopener" class="btn btn-outline" data-animate="fade-up" data-delay="300">
+        <a href="https://wa.me/6281234567890?text=Halo%20daenuna.co%2C%20saya%20mau%20lihat%20koleksi%20lengkap!"
+           target="_blank" rel="noopener" class="btn btn-outline" data-animate="fade-up" data-delay="300">
           Lihat Semua <span class="arrow">→</span>
         </a>
       </div>
 
-      <div class="collection-grid">
-        <article class="product" data-animate="fade-up" data-delay="100">
-          <div class="product-img">
-            <img src="https://placehold.co/600x750/F2C5BC/2C2015?text=Buni+si+Kelinci&font=lora" alt="Buni si Kelinci — boneka rajut handmade" loading="lazy" />
-            <span class="product-badge rose">Best Seller</span>
+      <div class="products-grid">
+        <article class="product-card" data-animate="fade-up" data-delay="100">
+          <div class="product-img-wrap">
+            <img src="assets/penguin.jpg" alt="Amigurumi Penguin with Ice Cream — daenuna.co" loading="lazy" />
+            <span class="product-badge pink">Best Seller</span>
           </div>
-          <div class="product-info">
-            <h3 class="product-name"><em>Buni</em> si Kelinci</h3>
-            <p class="product-price">Rp 95.000 – Rp 150.000</p>
-          </div>
-        </article>
-
-        <article class="product" data-animate="fade-up" data-delay="200">
-          <div class="product-img">
-            <img src="https://placehold.co/600x750/EEE3D2/2C2015?text=Dodo+si+Beruang&font=lora" alt="Dodo si Beruang — boneka rajut handmade" loading="lazy" />
-            <span class="product-badge sage">Custom Available</span>
-          </div>
-          <div class="product-info">
-            <h3 class="product-name"><em>Dodo</em> si Beruang</h3>
-            <p class="product-price">Rp 85.000 – Rp 140.000</p>
-          </div>
-        </article>
-
-        <article class="product" data-animate="fade-up" data-delay="300">
-          <div class="product-img">
-            <img src="https://placehold.co/600x750/F3ECE0/2C2015?text=Nini+si+Kucing&font=lora" alt="Nini si Kucing — boneka rajut handmade" loading="lazy" />
-            <span class="product-badge rose">Best Seller</span>
-          </div>
-          <div class="product-info">
-            <h3 class="product-name"><em>Nini</em> si Kucing</h3>
-            <p class="product-price">Rp 95.000 – Rp 145.000</p>
-          </div>
-        </article>
-
-        <article class="product" data-animate="fade-up" data-delay="400">
-          <div class="product-img">
-            <img src="https://placehold.co/600x750/BBC9BA/2C2015?text=Coco+si+Dino&font=lora" alt="Coco si Dino — boneka rajut handmade" loading="lazy" />
-            <span class="product-badge sage">Custom Available</span>
-          </div>
-          <div class="product-info">
-            <h3 class="product-name"><em>Coco</em> si Dino</h3>
-            <p class="product-price">Rp 100.000 – Rp 150.000</p>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================================================
-       CARA PESAN
-       ================================================ -->
-  <section class="section steps" id="pesan">
-    <div class="container steps-wrap">
-      <div class="section-head center">
-        <span class="eyebrow" data-animate="fade-up">Cara Pesan</span>
-        <h2 data-animate="fade-up" data-delay="100">Tiga langkah <em>kecil</em>, satu pelukan besar</h2>
-      </div>
-
-      <div class="steps-grid">
-        <!-- Wavy connecting line (desktop only) -->
-        <svg class="steps-line" viewBox="0 0 800 30" preserveAspectRatio="none" aria-hidden="true">
-          <path d="M0,15 Q100,0 200,15 T400,15 T600,15 T800,15" stroke="currentColor" stroke-width="2" stroke-dasharray="4 6" fill="none" stroke-linecap="round"/>
-        </svg>
-
-        <div class="step" data-animate="fade-up" data-delay="100">
-          <div class="step-icon">
-            <span aria-hidden="true">💬</span>
-            <span class="step-num">1</span>
-          </div>
-          <h3>Cerita ke Kami</h3>
-          <p>Pilih atau ceritakan boneka impianmu. Warna, gaya, atau kenangan apa yang ingin diabadikan.</p>
-        </div>
-
-        <div class="step" data-animate="fade-up" data-delay="200">
-          <div class="step-icon">
-            <span aria-hidden="true">🧶</span>
-            <span class="step-num">2</span>
-          </div>
-          <h3>Kami Rajut Pelan</h3>
-          <p>Dirajut tangan dengan penuh cinta selama 5–7 hari. Kami kabari progresnya, kok.</p>
-        </div>
-
-        <div class="step" data-animate="fade-up" data-delay="300">
-          <div class="step-icon">
-            <span aria-hidden="true">🎁</span>
-            <span class="step-num">3</span>
-          </div>
-          <h3>Sampai & Dipeluk</h3>
-          <p>Bonekamu tiba dalam kemasan cantik, siap dipeluk atau dijadikan hadiah yang berkesan.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================================================
-       TESTIMONI
-       ================================================ -->
-  <section class="section">
-    <div class="container">
-      <div class="section-head center">
-        <span class="eyebrow" data-animate="fade-up">Kata Mereka</span>
-        <h2 data-animate="fade-up" data-delay="100">Cerita kecil dari yang <em>sudah jatuh cinta</em></h2>
-      </div>
-
-      <div class="testimoni-grid">
-        <article class="testi" data-animate="fade-up" data-delay="100">
-          <span class="testi-tape" aria-hidden="true"></span>
-          <div class="testi-stars" aria-label="5 dari 5 bintang">★★★★★</div>
-          <p class="testi-quote">"Orderan pertama langsung jatuh cinta. Rapih banget jahitannya, dan bahannya lembut. Bener-bener berasa dibuat dengan hati."</p>
-          <div class="testi-author">
-            <div class="testi-avatar" aria-hidden="true">R</div>
-            <div>
-              <div class="testi-name">Risa</div>
-              <div class="testi-city">Jakarta</div>
+          <div class="product-body">
+            <h3 class="product-name">Penguin <em>with Ice Cream</em></h3>
+            <div class="product-row">
+              <span class="product-price">Rp17.000</span>
+              <span class="product-heart" aria-hidden="true">🧡</span>
             </div>
           </div>
         </article>
 
-        <article class="testi" data-animate="fade-up" data-delay="200">
-          <span class="testi-tape" aria-hidden="true"></span>
-          <div class="testi-stars" aria-label="5 dari 5 bintang">★★★★★</div>
-          <p class="testi-quote">"Custom boneka buat hadiah ulang tahun sahabat, dia nangis terharu 🥹 Detail mukanya mirip banget sama yang aku minta!"</p>
-          <div class="testi-author">
-            <div class="testi-avatar" aria-hidden="true">M</div>
-            <div>
-              <div class="testi-name">Manda</div>
-              <div class="testi-city">Surabaya</div>
+        <article class="product-card" data-animate="fade-up" data-delay="200">
+          <div class="product-img-wrap">
+            <img src="assets/nailong.jpg" alt="Amigurumi Nailong keychain — daenuna.co" loading="lazy" />
+            <span class="product-badge lavender">Custom Available</span>
+          </div>
+          <div class="product-body">
+            <h3 class="product-name">Amigurumi <em>Nailong</em></h3>
+            <div class="product-row">
+              <span class="product-price">Rp60.000</span>
+              <span class="product-heart" aria-hidden="true">🌸</span>
             </div>
           </div>
         </article>
 
-        <article class="testi" data-animate="fade-up" data-delay="300">
-          <span class="testi-tape" aria-hidden="true"></span>
-          <div class="testi-stars" aria-label="5 dari 5 bintang">★★★★★</div>
-          <p class="testi-quote">"Harga terjangkau tapi kualitas premium. Udah pesan 3 kali dan tiap dateng selalu bikin senyum. Recommended banget!"</p>
-          <div class="testi-author">
-            <div class="testi-avatar" aria-hidden="true">T</div>
-            <div>
-              <div class="testi-name">Tari</div>
-              <div class="testi-city">Bandung</div>
+        <article class="product-card" data-animate="fade-up" data-delay="300">
+          <div class="product-img-wrap">
+            <img src="assets/peach-kitten.jpg" alt="Amigurumi Peach Kitten — daenuna.co" loading="lazy" />
+            <span class="product-badge sage">Popular</span>
+          </div>
+          <div class="product-body">
+            <h3 class="product-name">Amigurumi <em>Peach Kitten</em></h3>
+            <div class="product-row">
+              <span class="product-price">Rp35.000</span>
+              <span class="product-heart" aria-hidden="true">🍑</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-animate="fade-up" data-delay="400">
+          <div class="product-img-wrap">
+            <img src="assets/murakami.jpg" alt="Amigurumi Murakami NewJeans keychain — daenuna.co" loading="lazy" />
+            <span class="product-badge pink">Fan Made</span>
+          </div>
+          <div class="product-body">
+            <h3 class="product-name">Murakami <em>NewJeans</em></h3>
+            <div class="product-row">
+              <span class="product-price">Rp64.000</span>
+              <span class="product-heart" aria-hidden="true">🌈</span>
             </div>
           </div>
         </article>
@@ -1353,141 +689,395 @@
     </div>
   </section>
 
-  <!-- ================================================
-       CERITA BRAND
-       ================================================ -->
+  <!-- ================================================ STORY ================================================ -->
   <section class="section story" id="cerita">
     <div class="container">
       <div class="story-grid">
         <div class="story-text">
-          <span class="eyebrow" data-animate="fade-right">Cerita Kami</span>
-          <h2 data-animate="fade-right" data-delay="100">Di Balik Setiap <em>Rajutan</em></h2>
-          <p data-animate="fade-right" data-delay="200">
-            Miss Knit lahir dari hobi kecil yang tumbuh jadi cinta. Berawal dari ruang kerja kecil di rumah, dengan secangkir teh hangat dan musik pelan di latar belakang.
+          <span class="eyebrow" data-animate="fade-right" style="margin-bottom:20px;display:inline-flex;">Cerita Kami</span>
+          <h2 data-animate="fade-right" data-delay="100">Di Balik Setiap <em>Rajutan</em> Kami</h2>
+          <p data-animate="fade-right" data-delay="180">
+            daenuna.co lahir dari sebuah kegemaran kecil — merajut sambil ditemani secangkir teh hangat di sudut kamar di Yogyakarta. Yang awalnya hanya hobi, pelan-pelan tumbuh menjadi sebuah cinta yang ingin kami bagi.
           </p>
-          <p data-animate="fade-right" data-delay="300">
-            Setiap boneka yang kami buat bukan sekadar mainan — tapi kenangan yang bisa dipeluk. Kami percaya bahwa karya tangan punya jiwa yang tidak bisa ditiru mesin.
+          <p data-animate="fade-right" data-delay="250">
+            Setiap boneka dan keychain dikerjakan satu per satu dengan tangan. Tidak ada yang diproduksi massal. Benang kami pilih dengan teliti, simpulnya dikerjakan dengan sabar, dan setiap detail dijaga agar hasilnya seindah yang kamu bayangkan.
+          </p>
+          <p data-animate="fade-right" data-delay="320">
+            Kami percaya karya tangan punya jiwa yang berbeda. Dan jiwa itulah yang ingin kami titipkan di setiap pesananmu.
           </p>
           <div class="story-sign" data-animate="fade-right" data-delay="400">
-            Dengan cinta, tim Miss Knit
+            Dengan cinta, daenuna.co — Yogyakarta
           </div>
         </div>
 
         <div class="story-visual" data-animate="fade-left" data-delay="200">
-          <!-- Floating yarn ball decoration -->
           <svg class="story-yarn" viewBox="0 0 100 100" fill="none" aria-hidden="true">
-            <circle cx="50" cy="50" r="42" fill="#E8A598"/>
-            <path d="M14 50 Q30 35 50 50 T86 50 M14 50 Q30 65 50 50 T86 50 M30 18 Q40 40 50 50 T70 82 M30 82 Q40 60 50 50 T70 18" stroke="#FAF6F0" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.7"/>
-            <circle cx="50" cy="50" r="42" stroke="#D78A7B" stroke-width="1" fill="none" opacity="0.4"/>
+            <circle cx="50" cy="50" r="42" fill="#CAB8EC"/>
+            <path d="M14 50Q30 35 50 50T86 50M14 50Q30 65 50 50T86 50M30 18Q40 40 50 50T70 82M30 82Q40 60 50 50T70 18" stroke="#fff" stroke-width="1.4" stroke-linecap="round" opacity=".65"/>
+            <circle cx="50" cy="50" r="42" stroke="#9B7CE0" stroke-width="1" fill="none" opacity=".35"/>
           </svg>
-
-          <div class="story-img-card">
-            <img src="https://images.unsplash.com/photo-1604881991720-f91add269bed?w=800&q=85&auto=format&fit=crop" alt="Tangan sedang merajut dengan benang lembut" loading="lazy" />
+          <div class="story-img-main">
+            <img src="assets/murakami.jpg" alt="Detail rajutan daenuna.co" loading="lazy" />
           </div>
-          <div class="story-img-2">
-            <img src="https://images.unsplash.com/photo-1606830733744-0ad778449672?w=500&q=85&auto=format&fit=crop" alt="Detail bola benang dan rajutan cozy" loading="lazy" />
+          <div class="story-img-float">
+            <img src="assets/penguin.jpg" alt="Amigurumi Penguin daenuna.co" loading="lazy" />
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ================================================
-       FINAL CTA
-       ================================================ -->
-  <section class="cta" id="kontak">
+  <!-- ================================================ WHY ================================================ -->
+  <section class="section why">
     <div class="container">
-      <div class="cta-inner" data-animate="zoom">
+      <div class="section-head center">
+        <span class="eyebrow" data-animate="fade-up">Kenapa daenuna.co?</span>
+        <h2 data-animate="fade-up" data-delay="100">Bukan sekadar boneka —<br/><em>kenangan yang bisa dipeluk</em></h2>
+      </div>
+      <div class="why-grid">
+        <article class="why-card" data-animate="fade-up" data-delay="100">
+          <div class="why-icon" aria-hidden="true">🤲</div>
+          <h3>100% Handmade</h3>
+          <p>Dibuat tangan satu per satu, bukan mesin. Setiap simpul penuh kesabaran dan perhatian.</p>
+        </article>
+        <article class="why-card" data-animate="fade-up" data-delay="200">
+          <div class="why-icon" aria-hidden="true">🎨</div>
+          <h3>Custom Request</h3>
+          <p>Warna, karakter, ukuran — semua bisa disesuaikan. Ceritamu, kami yang wujudkan.</p>
+        </article>
+        <article class="why-card" data-animate="fade-up" data-delay="300">
+          <div class="why-icon" aria-hidden="true">🎁</div>
+          <h3>Hadiah Berkesan</h3>
+          <p>Unik, personal, dan penuh cinta — cocok untuk hadiah ulang tahun, wisuda, atau "aku peduli".</p>
+        </article>
+        <article class="why-card" data-animate="fade-up" data-delay="400">
+          <div class="why-icon" aria-hidden="true">🏡</div>
+          <h3>Produk Lokal Yogya</h3>
+          <p>Mendukung pengrajin lokal Indonesia. Setiap pesananmu memberi semangat baru buat kami.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================ HOW TO ORDER ================================================ -->
+  <section class="section steps" id="pesan">
+    <div class="container">
+      <div class="section-head center">
+        <span class="eyebrow" data-animate="fade-up">Cara Pesan</span>
+        <h2 data-animate="fade-up" data-delay="100">Tiga langkah <em>mudah</em>, satu pelukan hangat</h2>
+        <p data-animate="fade-up" data-delay="180">Proses sesantai ngobrol sama teman — tidak ribet, tidak perlu formal.</p>
+      </div>
+      <div class="steps-grid">
+        <div class="step" data-animate="fade-up" data-delay="100">
+          <div class="step-icon"><span aria-hidden="true">💬</span><span class="step-num">1</span></div>
+          <h3>Cerita ke Kami</h3>
+          <p>DM atau WhatsApp kami. Ceritakan karakter, warna, dan ukuran boneka impianmu.</p>
+        </div>
+        <div class="step" data-animate="fade-up" data-delay="200">
+          <div class="step-icon"><span aria-hidden="true">🧶</span><span class="step-num">2</span></div>
+          <h3>Kami Rajut dengan Cinta</h3>
+          <p>Dirajut tangan selama 5–10 hari. Kami update progres dan kirim foto sebelum dikirim.</p>
+        </div>
+        <div class="step" data-animate="fade-up" data-delay="300">
+          <div class="step-icon"><span aria-hidden="true">📦</span><span class="step-num">3</span></div>
+          <h3>Sampai &amp; Dipeluk</h3>
+          <p>Bonekamu tiba dalam kemasan cantik, siap dipeluk atau dijadikan hadiah tak terlupakan.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================ TESTIMONIALS ================================================ -->
+  <section class="section testi-section">
+    <div class="container">
+      <div class="section-head center">
+        <span class="eyebrow" data-animate="fade-up">Kata Mereka</span>
+        <h2 data-animate="fade-up" data-delay="100">Cerita dari yang sudah <em>jatuh cinta</em></h2>
+      </div>
+      <div class="testimoni-grid">
+        <article class="testi" data-animate="fade-up" data-delay="100">
+          <span class="testi-tape" aria-hidden="true"></span>
+          <div class="testi-stars" aria-label="5 bintang">★★★★★</div>
+          <p class="testi-quote">"Rajutannya rapi banget, benangnya lembut. Beneran berasa dibuat dengan hati. Udah order 3x dan selalu bikin senyum tiap dateng!"</p>
+          <div class="testi-author">
+            <div class="testi-avatar" aria-hidden="true">R</div>
+            <div><div class="testi-name">Risa A.</div><div class="testi-city">Jakarta</div></div>
+          </div>
+        </article>
+        <article class="testi" data-animate="fade-up" data-delay="200">
+          <span class="testi-tape" aria-hidden="true"></span>
+          <div class="testi-stars" aria-label="5 bintang">★★★★★</div>
+          <p class="testi-quote">"Custom boneka buat hadiah ulang tahun sahabat, dia nangis terharu 🥹 Detail mukanya sesuai banget sama request! Highly recommended."</p>
+          <div class="testi-author">
+            <div class="testi-avatar" aria-hidden="true">M</div>
+            <div><div class="testi-name">Manda P.</div><div class="testi-city">Surabaya</div></div>
+          </div>
+        </article>
+        <article class="testi" data-animate="fade-up" data-delay="300">
+          <span class="testi-tape" aria-hidden="true"></span>
+          <div class="testi-stars" aria-label="5 bintang">★★★★★</div>
+          <p class="testi-quote">"Harga terjangkau tapi kualitas premium. Kemasannya juga lucu. Penjualnya responsif dan ramah banget, pasti repeat order!"</p>
+          <div class="testi-author">
+            <div class="testi-avatar" aria-hidden="true">T</div>
+            <div><div class="testi-name">Tari N.</div><div class="testi-city">Bandung</div></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================ SOCIAL CTA ================================================ -->
+  <section class="section social-cta" id="sosial">
+    <div class="container">
+      <div class="social-inner">
+        <span class="eyebrow" style="justify-content:center;display:inline-flex;" data-animate="fade-up">Ikuti Kami</span>
+        <h2 data-animate="fade-up" data-delay="100">Temukan kami di <em>sosial media</em></h2>
+        <p data-animate="fade-up" data-delay="180">
+          Lihat proses rajutan, karakter terbaru, dan behind-the-scenes di Instagram &amp; TikTok kami. DM langsung untuk order atau sekedar tanya-tanya!
+        </p>
+        <div class="social-cards" data-animate="fade-up" data-delay="260">
+          <a href="https://instagram.com/daenuna.co" target="_blank" rel="noopener" class="social-card">
+            <div class="social-icon ig" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <rect x="3" y="3" width="18" height="18" rx="5"/>
+                <circle cx="12" cy="12" r="4"/>
+                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+              </svg>
+            </div>
+            <div class="social-card-text">
+              <div class="social-label">Instagram</div>
+              <div class="social-handle">@daenuna.co</div>
+            </div>
+          </a>
+          <a href="https://tiktok.com/@daenuna" target="_blank" rel="noopener" class="social-card">
+            <div class="social-icon tt" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.31 6.31 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.7a8.18 8.18 0 0 0 4.77 1.5V6.75a4.85 4.85 0 0 1-1-.06z"/>
+              </svg>
+            </div>
+            <div class="social-card-text">
+              <div class="social-label">TikTok</div>
+              <div class="social-handle">@daenuna</div>
+            </div>
+          </a>
+        </div>
+        <span class="social-hand" data-animate="fade-up" data-delay="340">
+          "yuk follow untuk lihat proses rajutan setiap hari! ✨"
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================ FAQ ================================================ -->
+  <section class="section faq" id="faq">
+    <div class="container">
+      <div class="section-head center">
+        <span class="eyebrow" data-animate="fade-up">FAQ</span>
+        <h2 data-animate="fade-up" data-delay="100">Pertanyaan yang <em>sering ditanya</em></h2>
+        <p data-animate="fade-up" data-delay="180">Masih ada yang ingin ditanyakan? DM kami di Instagram atau WhatsApp, kami senang menjawab!</p>
+      </div>
+      <div class="faq-list" data-animate="fade-up" data-delay="220">
+
+        <div class="faq-item open">
+          <button class="faq-q" aria-expanded="true">
+            <span>Bisa custom desain / karakter sendiri?</span>
+            <span class="faq-icon" aria-hidden="true">
+              <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="7" y1="1" x2="7" y2="13"/><line x1="1" y1="7" x2="13" y2="7"/></svg>
+            </span>
+          </button>
+          <div class="faq-a">
+            <div class="faq-a-inner">Tentu bisa! Itu justru spesialisasi kami. Kamu bisa request karakter apapun — anime, hewan peliharaan, atau karakter original. Kirimkan referensi gambar dan kami akan diskusikan bersama lewat WhatsApp atau DM Instagram.</div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span>Berapa lama waktu pengerjaan?</span>
+            <span class="faq-icon" aria-hidden="true">
+              <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="7" y1="1" x2="7" y2="13"/><line x1="1" y1="7" x2="13" y2="7"/></svg>
+            </span>
+          </button>
+          <div class="faq-a">
+            <div class="faq-a-inner">Produk standar biasanya 5–7 hari kerja. Order custom atau ukuran besar bisa 7–14 hari. Kami selalu update progres dan kirimkan foto sebelum boneka dikirim agar kamu bisa menyetujui hasilnya.</div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span>Bisa request warna dan ukuran?</span>
+            <span class="faq-icon" aria-hidden="true">
+              <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="7" y1="1" x2="7" y2="13"/><line x1="1" y1="7" x2="13" y2="7"/></svg>
+            </span>
+          </button>
+          <div class="faq-a">
+            <div class="faq-a-inner">Bisa banget! Warna benang bisa disesuaikan dengan palet apapun. Ukuran juga bisa custom — dari mini keychain hingga boneka besar 30cm+. Harga disesuaikan dengan kompleksitas dan ukuran.</div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span>Apakah bisa kirim ke luar Yogya?</span>
+            <span class="faq-icon" aria-hidden="true">
+              <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="7" y1="1" x2="7" y2="13"/><line x1="1" y1="7" x2="13" y2="7"/></svg>
+            </span>
+          </button>
+          <div class="faq-a">
+            <div class="faq-a-inner">Bisa! Kami melayani pengiriman ke seluruh Indonesia via JNE, J&T, dan SiCepat. Area Yogyakarta tersedia pickup langsung. Kami kemas dengan bubble wrap dan box supaya boneka aman sampai tujuan.</div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span>Bagaimana cara pembayaran?</span>
+            <span class="faq-icon" aria-hidden="true">
+              <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="7" y1="1" x2="7" y2="13"/><line x1="1" y1="7" x2="13" y2="7"/></svg>
+            </span>
+          </button>
+          <div class="faq-a">
+            <div class="faq-a-inner">Via transfer bank (BCA, BRI, Mandiri), e-wallet (GoPay, OVO, DANA), atau QRIS. Order custom meminta DP 50% di awal dan pelunasan sebelum pengiriman.</div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span>Apakah bahan aman untuk anak?</span>
+            <span class="faq-icon" aria-hidden="true">
+              <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="7" y1="1" x2="7" y2="13"/><line x1="1" y1="7" x2="13" y2="7"/></svg>
+            </span>
+          </button>
+          <div class="faq-a">
+            <div class="faq-a-inner">Kami menggunakan benang katun yang lembut dan tidak mengandung bahan berbahaya. Untuk anak di bawah 3 tahun, mohon informasikan saat order agar kami menghindari aksesoris kecil seperti safety eyes.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================ FINAL CTA ================================================ -->
+  <section class="final-cta" id="kontak">
+    <div class="container">
+      <div class="cta-box" data-animate="zoom">
+        <span class="cta-deco cta-deco-1" aria-hidden="true">🧶</span>
+        <span class="cta-deco cta-deco-2" aria-hidden="true">✨</span>
+        <span class="cta-deco cta-deco-3" aria-hidden="true">🌸</span>
+        <span class="cta-deco cta-deco-4" aria-hidden="true">💕</span>
         <span class="eyebrow">Yuk, mulai sekarang</span>
-        <h2>Siap Punya Boneka <em>Versi Kamu?</em></h2>
-        <p class="cta-sub">Cerita kamu, kami yang rajut. Hubungi kami via WhatsApp untuk konsultasi gratis — santai aja, kayak ngobrol sama teman.</p>
-        <div class="cta-buttons">
-          <a href="https://wa.me/6281234567890" target="_blank" rel="noopener" class="btn btn-primary">
+        <h2 class="cta-title">Siap Punya Boneka<br/><em>Custom Versi Kamu?</em></h2>
+        <p class="cta-sub">Cerita kamu, kami yang rajut. Hubungi lewat WhatsApp untuk konsultasi gratis — santai aja, seperti ngobrol sama teman ☕</p>
+        <div class="cta-btns">
+          <a href="https://wa.me/6281234567890?text=Halo%20daenuna.co%2C%20saya%20mau%20order%20custom%20boneka%20rajut!"
+             target="_blank" rel="noopener" class="btn btn-primary">
             Chat WhatsApp <span class="arrow">→</span>
           </a>
-          <a href="https://instagram.com/missknit.id" target="_blank" rel="noopener" class="btn btn-outline">
-            Lihat Instagram
+          <a href="https://instagram.com/daenuna.co" target="_blank" rel="noopener" class="btn btn-ghost">
+            DM Instagram
           </a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ================================================
-       FOOTER
-       ================================================ -->
+  <!-- ================================================ FOOTER ================================================ -->
   <footer class="footer">
-    <div class="container footer-inner">
-      <div class="footer-left">
-        <a href="#" class="logo">
-          <svg class="logo-mark" viewBox="0 0 40 40" fill="none" aria-hidden="true">
-            <circle cx="20" cy="20" r="17" fill="#E8A598"/>
-            <path d="M11 20c0-5 4-9 9-9s9 4 9 9-4 9-9 9" stroke="#FAF6F0" stroke-width="1.8" stroke-linecap="round"/>
-            <path d="M14 17c2 1 4 1 6 0M14 23c2-1 4-1 6 0M20 11v18" stroke="#FAF6F0" stroke-width="1.4" stroke-linecap="round" opacity="0.7"/>
-          </svg>
-          <span>Miss Knit</span>
-        </a>
-        <span class="footer-tag">Dibuat dengan tangan. Diberikan dengan cinta.</span>
-      </div>
+    <div class="container">
+      <div class="footer-grid">
 
-      <div class="footer-social">
-        <a href="https://instagram.com/missknit.id" target="_blank" rel="noopener" aria-label="Instagram">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
-            <rect x="3" y="3" width="18" height="18" rx="5"/>
-            <circle cx="12" cy="12" r="4"/>
-            <circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>
-          </svg>
-        </a>
-        <a href="https://wa.me/6281234567890" target="_blank" rel="noopener" aria-label="WhatsApp">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
-            <path d="M21 11.5a8.4 8.4 0 0 1-1.3 4.4 8.5 8.5 0 0 1-7.3 4.1 8.4 8.4 0 0 1-4.4-1.2L3 20l1.3-4.9a8.4 8.4 0 0 1-1.2-4.4 8.5 8.5 0 0 1 4.1-7.3A8.4 8.4 0 0 1 11.5 2a8.5 8.5 0 0 1 9.5 9.5z"/>
-          </svg>
-        </a>
-        <a href="mailto:halo@missknit.id" aria-label="Email">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
-            <rect x="3" y="5" width="18" height="14" rx="2"/>
-            <path d="m3 7 9 6 9-6"/>
-          </svg>
-        </a>
-      </div>
+        <div class="footer-brand">
+          <a href="#" class="logo" aria-label="daenuna.co">
+            <img src="assets/logo.jpg" class="logo-img" alt="daenuna.co" />
+            <span>daenuna.co</span>
+          </a>
+          <span class="footer-tagline">"made with love, stitched for you"</span>
+          <p class="footer-desc">Boneka &amp; keychain rajut handmade dari Yogyakarta. Custom karakter, warna, dan ukuran tersedia. Dibuat dengan tangan, dikirim dengan cinta.</p>
+          <div class="footer-socials">
+            <a href="https://instagram.com/daenuna.co" target="_blank" rel="noopener" aria-label="Instagram @daenuna.co">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+            </a>
+            <a href="https://tiktok.com/@daenuna" target="_blank" rel="noopener" aria-label="TikTok @daenuna">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.31 6.31 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.7a8.18 8.18 0 0 0 4.77 1.5V6.75a4.85 4.85 0 0 1-1-.06z"/></svg>
+            </a>
+            <a href="https://wa.me/6281234567890" target="_blank" rel="noopener" aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-1.3 4.4 8.5 8.5 0 0 1-7.3 4.1 8.4 8.4 0 0 1-4.4-1.2L3 20l1.3-4.9a8.4 8.4 0 0 1-1.2-4.4 8.5 8.5 0 0 1 4.1-7.3A8.4 8.4 0 0 1 11.5 2a8.5 8.5 0 0 1 9.5 9.5z"/></svg>
+            </a>
+          </div>
+        </div>
 
-      <div class="footer-copy">© 2025 Miss Knit. Made in Indonesia.</div>
+        <div class="footer-col">
+          <h4>Navigasi</h4>
+          <ul>
+            <li><a href="#home">Beranda</a></li>
+            <li><a href="#koleksi">Koleksi</a></li>
+            <li><a href="#pesan">Cara Pesan</a></li>
+            <li><a href="#cerita">Cerita Kami</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Sosial Media</h4>
+          <ul>
+            <li><a href="https://instagram.com/daenuna.co" target="_blank" rel="noopener">Instagram @daenuna.co</a></li>
+            <li><a href="https://tiktok.com/@daenuna" target="_blank" rel="noopener">TikTok @daenuna</a></li>
+            <li><a href="https://wa.me/6281234567890" target="_blank" rel="noopener">WhatsApp</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Info</h4>
+          <div class="footer-info">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span>Jam operasional:<br/><strong>10.00 – 22.00 WIB</strong><br/>Senin – Minggu</span>
+          </div>
+          <div class="footer-info">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Yogyakarta, Indonesia 🇮🇩</span>
+          </div>
+          <div class="footer-info">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><polyline points="3 7 12 13 21 7"/></svg>
+            <span>DM Instagram atau<br/>WhatsApp untuk order</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <span>© 2025 daenuna.co — All rights reserved. Made with ♡ in Yogyakarta.</span>
+        <span>
+          <a href="https://instagram.com/daenuna.co" target="_blank" rel="noopener">@daenuna.co</a>
+          &nbsp;·&nbsp;
+          <a href="https://tiktok.com/@daenuna" target="_blank" rel="noopener">@daenuna</a>
+        </span>
+      </div>
     </div>
   </footer>
 
-  <!-- ================================================
-       JAVASCRIPT
-       ================================================ -->
+  <!-- ================================================ JAVASCRIPT ================================================ -->
   <script>
     (function() {
       'use strict';
 
-      /* ---- Scroll reveal via Intersection Observer ---- */
+      /* Scroll reveal */
       const revealEls = document.querySelectorAll('[data-animate]');
       if ('IntersectionObserver' in window && revealEls.length) {
         const io = new IntersectionObserver((entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('is-visible');
-              io.unobserve(entry.target);
-            }
+          entries.forEach((e) => {
+            if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); }
           });
-        }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
+        }, { threshold: 0.12, rootMargin: '0px 0px -50px 0px' });
         revealEls.forEach((el) => io.observe(el));
       } else {
-        // Fallback: just show everything
         revealEls.forEach((el) => el.classList.add('is-visible'));
       }
 
-      /* ---- Navbar scrolled state ---- */
+      /* Navbar scroll */
       const nav = document.getElementById('nav');
-      const onScroll = () => {
-        nav.classList.toggle('scrolled', window.scrollY > 40);
-      };
+      const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 40);
       window.addEventListener('scroll', onScroll, { passive: true });
       onScroll();
 
-      /* ---- Mobile drawer ---- */
+      /* Mobile drawer */
       const toggle = document.getElementById('navToggle');
       const drawer = document.getElementById('mobileDrawer');
       if (toggle && drawer) {
@@ -1505,20 +1095,34 @@
         });
       }
 
-      /* ---- Subtle parallax on hero blobs (disabled on touch & small screens) ---- */
-      const isTouch = matchMedia('(hover: none)').matches;
-      const isSmall = matchMedia('(max-width: 720px)').matches;
-      if (!isTouch && !isSmall) {
-        const blobs = document.querySelectorAll('.hero-blob, .hero-blob-2, .story-yarn');
+      /* FAQ accordion */
+      document.querySelectorAll('.faq-q').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const item = btn.closest('.faq-item');
+          const wasOpen = item.classList.contains('open');
+          document.querySelectorAll('.faq-item').forEach((i) => {
+            i.classList.remove('open');
+            i.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+          });
+          if (!wasOpen) {
+            item.classList.add('open');
+            btn.setAttribute('aria-expanded', 'true');
+          }
+        });
+      });
+
+      /* Subtle parallax blobs (desktop only) */
+      if (!matchMedia('(hover:none)').matches && !matchMedia('(max-width:768px)').matches) {
+        const blobs = document.querySelectorAll('.hero-bg-1,.hero-bg-2,.hero-yarn,.story-yarn');
         let raf = null;
         document.addEventListener('mousemove', (e) => {
           if (raf) return;
           raf = requestAnimationFrame(() => {
-            const x = (e.clientX / window.innerWidth - 0.5) * 18;
-            const y = (e.clientY / window.innerHeight - 0.5) * 18;
+            const x = (e.clientX / window.innerWidth - .5) * 22;
+            const y = (e.clientY / window.innerHeight - .5) * 22;
             blobs.forEach((b, i) => {
-              const factor = (i + 1) * 0.6;
-              b.style.translate = `${x * factor}px ${y * factor}px`;
+              const f = (i + 1) * .45;
+              b.style.transform = `translate(${x * f}px,${y * f}px)`;
             });
             raf = null;
           });
